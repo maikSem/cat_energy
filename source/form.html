@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="html" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -28,7 +28,108 @@
       </div>
     </nav>
   </header>
-  <main class="main"></main>
+  <main class="main">
+    <h1 class="visually-hidden">В магазине Кэт энерджи, мы подберём вам самую эффективную программу по снижению или
+      набору веса!</h1>
+    <section class="form-order">
+      <form class="form" action="https://echo.htmlacademy.ru" method="get">
+        <h2 class="form__title">Подбор программы</h2>
+        <p class="form__text"> Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <fieldset class="form__header">
+          <label class="form__caption">Имя:<sup class="form__sup">*</sup>
+            <input class="form__name" type="text" name="name" placeholder="Барсик">
+          </label>
+          <label class="form__caption">Вес (кг):<sup class="form__sup">*</sup>
+            <input class="form__mass" type="number" name="mass" value="7">
+          </label>
+          <label class="form__caption">Возраст (лет):
+            <input class="form__age" type="number" name="age" value="7">
+          </label>
+        </fieldset>
+        <fieldset class="form__programs">
+          <ul class="form__list form__list--radio">
+            <li class="form__item form__item--radio">
+              <label class="form__caption form__caption--radio">
+                <input class="form__radio" type="radio" name="programs-type" value="sliming">
+                Похудение
+              </label>
+            </li>
+            <li class="form__item form__item--radio">
+              <label class="form__caption form__caption--radio">
+                <input class="form__radio" type="radio" name="programs-type" value="mass">
+                Набор массы
+              </label>
+            </li>
+            <li class="form__item form__item--radio">
+              <label class="form__caption form__caption--radio">
+                <input class="form__radio" type="radio" name="programs-type" value="do-not-know">
+                Не знаю (Нужен ваш совет)
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__contact">
+          <legend class="form__legend">Контактные данные (владельца кота)</legend>
+          <label class="form__caption">
+            Email<sup class="form__sup">*</sup>
+            <input class="form__email" type="email" name="email" placeholder="kuklachev@gmail.com">
+          </label>
+          <label class="form__caption">
+            Телефон:<sup class="form__sup">*</sup>
+            <input class="form__phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
+          </label>
+        </fieldset>
+        <fieldset class="form__massage">
+          <legend class="form__legend">Комментарий</legend>
+          <textarea class="form__textarea" cols="30" rows="10" name="message"
+            placeholder="Расскажите обо всех повАдках кота"></textarea>
+        </fieldset>
+        <fieldset class="form__additional">
+          <legend class="form__legend">Дополнительно</legend>
+          <ul class="form__list form__list--checkbox">
+            <li class="form__item form__item--checkbox">
+              <label class="form__caption form__caption--checkbox">
+                <input class="form__checkbox" type="checkbox" name="sugar">
+                Cахарозаменитель
+              </label>
+            </li>
+            <li class="form__item form__item--checkbox">
+              <label class="form__caption form__caption--checkbox">
+                <input class="form__checkbox" type="checkbox" name="water">
+                Питьевая вода
+              </label>
+            </li>
+            <li class="form__item form__item--checkbox">
+              <label class="form__caption form__caption--checkbox">
+                <input class="form__checkbox" type="checkbox" name="milk">
+                Молоко
+              </label>
+            </li>
+            <li class="form__item form__item--checkbox">
+              <label class="form__caption form__caption--checkbox">
+                <input class="form__checkbox" type="checkbox" name="vitamins">
+                Витамины
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button button-form">Отправить заявку</button>
+        <small class="form__required-areas">
+          * — Обязательные поля
+        </small>
+      </form>
+    </section>
+    <section class="map">
+      <h2 class="visually-hidden">Как нас найти?</h2>
+      <div class="map__wrapper">
+        <p class="map__text">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="map__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="map__wrapper-img">
+          <img class="map__img" src="https://via.placeholder.com/150x150" width="" height="" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
   <footer class="footer">
     <div class="footer__wrapper">
       <div class="footer__logo"><img class="footer__logo-img" src="https://via.placeholder.com/150x150" alt=""></div>
