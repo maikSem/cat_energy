@@ -1,2 +1,37 @@
-// Начните писать стили здесь
-body { background: red; }
+@import "variables.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+@import "blocks/header.scss";
+@import "blocks/programs.scss";
+@import "blocks/advantages.scss";
+@import "blocks/footer.scss";
+@import "blocks/catalog.scss";
+@import "blocks/all-products.scss";
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.body {
+  width: 320px;
+  min-height: 100%;
+  margin: 0 auto;
+}
+

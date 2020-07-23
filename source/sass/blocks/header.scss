@@ -1,0 +1,84 @@
+.header__top {
+  min-height: 66px;
+}
+
+.header__logo {
+  display: block;
+  width: 180px;
+  margin: 0;
+}
+
+.header__main {
+  min-height: 305px;
+  background: url(../img/index-background-mobile@1x.jpg) 0 0 no-repeat $basic-green;
+  background-size: cover;
+}
+
+.header__title {
+  margin: 0;
+  padding-top: 27px;
+  @include special-font-normal;
+  @include h1;
+  text-align: center;
+  color: $basic-white;
+}
+
+.header__slogan {
+  margin: 0;
+  padding-top: 25px;
+  @include special-font-normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic-white;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__item {
+  text-align: center;
+  list-style: none;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 21px 0 23px 0;
+  @include special-font-medium;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $basic-black;
+
+  border-bottom: 1px solid $border-grey;
+}
+
+.main-nav__toggle {
+  width: 24px;
+  height: 16px;
+  // padding: 25px 0 25px 65px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  width: 100%;
+  padding: 11px 0;
+  @include special-font-normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic-white;
+  background-color: $basic-green;
+}
