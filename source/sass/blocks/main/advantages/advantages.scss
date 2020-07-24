@@ -21,7 +21,6 @@
   margin: 0;
   padding-left: 80px;
 
-  @include basic-font-normal;
   @include text-size(14px, 18px);
   color: $grey-dark;
 
