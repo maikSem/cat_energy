@@ -1,0 +1,31 @@
+@mixin basic-font-normal {
+  font: {
+    family: "Arial", sans-serif;
+    weight: normal;
+  }
+}
+
+@mixin special-font-normal {
+  font: {
+    family: "Oswald", "Arial", sans-serif;
+    weight: normal;
+  }
+}
+
+@mixin special-font-medium {
+  font: {
+    family: "Oswald", "Arial", sans-serif;
+    weight: 500;
+  }
+}
+
+@mixin h1 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+
+@mixin text-size($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}

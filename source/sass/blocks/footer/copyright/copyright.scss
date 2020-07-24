@@ -1,0 +1,7 @@
+.copyright__link-text {
+  @include text-size(16px, 18px);
+  color: $grey-dark;
+  text: {
+    decoration: none;
+  }
+}
