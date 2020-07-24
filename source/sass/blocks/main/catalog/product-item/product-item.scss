@@ -1,5 +1,6 @@
 .product-item__title {
   margin: 0;
+
   @include special-font-normal;
   @include text-size(16px, 20px);
   text: {
@@ -9,6 +10,7 @@
 
 .product-item__table {
   margin: 0;
+
   @include basic-font-normal;
   @include text-size(12px, 16px);
 }

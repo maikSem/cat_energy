@@ -38,6 +38,7 @@
   width: 320px;
   min-height: 100%;
   margin: 0 auto;
+
   @include basic-font-normal;
 }
 
@@ -51,6 +52,7 @@
   display: inline-block;
   width: 100%;
   padding: 11px 0;
+
   @include special-font-normal;
   font-size: 14px;
   line-height: 18px;
