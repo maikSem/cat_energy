@@ -1,7 +1,6 @@
 .all-products__text {
   margin: 0;
   padding: 79px 0 8px 0;
-
   @include special-font-normal;
   @include text-size(16px, 20px);
   text: {

@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
 }
-  
+
 .main-nav__item {
   text-align: center;
   list-style: none;
 }
-  
+
 .main-nav__link {
   display: block;
   padding: 21px 0 23px 0;
@@ -17,6 +17,5 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $basic-black;
-  
   border-bottom: 1px solid $border-grey;
 }

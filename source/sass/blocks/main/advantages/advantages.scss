@@ -1,6 +1,5 @@
 .advantages__title {
   margin: 27px 0 38px 0;
-
   @include special-font-normal;
   @include text-size(36px, 40px);
 }
@@ -23,14 +22,12 @@
 
   @include text-size(14px, 18px);
   color: $grey-dark;
-
   &::before {
     content: '';
     position: absolute;
     width: 60px;
     height: 60px;
     left: 0px;
-
     background-color: $basic-green;
 }
 }

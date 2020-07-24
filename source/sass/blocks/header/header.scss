@@ -10,7 +10,6 @@
 
 .header__main {
   min-height: 305px;
-
   background: url(../img/index-background-mobile@1x.jpg) 0 0 no-repeat $basic-green;
   background-size: cover;
 }
@@ -18,7 +17,6 @@
 .header__title {
   margin: 0;
   padding-top: 27px;
-
   @include special-font-normal;
   @include h1;
   text-align: center;
@@ -28,7 +26,6 @@
 .header__slogan {
   margin: 0;
   padding-top: 25px;
-  
   @include special-font-normal;
   font-size: 14px;
   line-height: 14px;
@@ -40,9 +37,7 @@
 .header__toggle {
   width: 24px;
   height: 16px;
-
   background-color: transparent;
   border: none;
-
   cursor: pointer;
 }
