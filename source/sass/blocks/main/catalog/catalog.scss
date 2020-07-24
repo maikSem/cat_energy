@@ -1,0 +1,15 @@
+.catalog__title {
+  margin: 27px 0 41px 0;
+
+  @include special-font-normal;
+  @include text-size(36px, 36px);
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__item {
+  list-style: none;
+}
