@@ -35,21 +35,21 @@
     <h1 class="visually-hidden">В магазине Кэт энерджи, мы подберём вам самую эффективную программу по снижению или
       набору веса!</h1>
     <section class="form-order">
-      <form class="form" action="https://echo.htmlacademy.ru" method="get">
+      <form class="form container" action="https://echo.htmlacademy.ru" method="get">
         <h2 class="form__title">Подбор программы</h2>
-        <p class="form__text"> Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <fieldset class="form__header">
-          <label class="form__caption">Имя:<sup class="form__sup">*</sup>
+        <p class="form__text"> Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
+        <fieldset class="form__section form__section-header">
+          <label class="form__caption form__caption--text">Имя:<sup class="form__sup">*</sup>
             <input class="form__name" type="text" name="name" placeholder="Барсик">
           </label>
-          <label class="form__caption">Вес (кг):<sup class="form__sup">*</sup>
+          <label class="form__caption form__caption--text">Вес (кг):<sup class="form__sup">*</sup>
             <input class="form__mass" type="number" name="mass" value="7">
           </label>
-          <label class="form__caption">Возраст (лет):
+          <label class="form__caption form__caption--text">Возраст (лет):
             <input class="form__age" type="number" name="age" value="7">
           </label>
         </fieldset>
-        <fieldset class="form__programs">
+        <fieldset class="form__section form__section-programs">
           <ul class="form__list form__list--radio">
             <li class="form__item form__item--radio">
               <label class="form__caption form__caption--radio">
@@ -71,23 +71,23 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__contact">
+        <fieldset class="form__section form__section-contact">
           <legend class="form__legend">Контактные данные (владельца кота)</legend>
-          <label class="form__caption">
+          <label class="form__caption form__caption--text">
             Email<sup class="form__sup">*</sup>
             <input class="form__email" type="email" name="email" placeholder="kuklachev@gmail.com">
           </label>
-          <label class="form__caption">
+          <label class="form__caption form__caption--text">
             Телефон:<sup class="form__sup">*</sup>
             <input class="form__phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
           </label>
         </fieldset>
-        <fieldset class="form__massage">
+        <fieldset class="form__section form__section-massage">
           <legend class="form__legend">Комментарий</legend>
           <textarea class="form__textarea" cols="30" rows="10" name="message"
             placeholder="Расскажите обо всех повАдках кота"></textarea>
         </fieldset>
-        <fieldset class="form__additional">
+        <fieldset class="form__section form__section-additional">
           <legend class="form__legend">Дополнительно</legend>
           <ul class="form__list form__list--checkbox">
             <li class="form__item form__item--checkbox">

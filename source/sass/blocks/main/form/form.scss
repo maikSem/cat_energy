@@ -1,0 +1,54 @@
+.form-order {
+  @include special-font-normal;
+}
+
+.form__title {
+  margin: 27px 0 37px 0;
+
+  @include text-size(36px, 36px);
+  font-weight: normal;
+}
+
+.form__text {
+  margin: 0 0 39px 0;
+
+  @include text-size(14px, 18px);
+  text: {
+    transform: uppercase;
+  }
+}
+
+.form__section {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__caption {
+  @include input-form;
+}
+
+.form__caption--text {
+  color: $grey-dark;
+}
+
+.form__caption--radio {
+  color: $grey-dark-hight;
+}
+
+.form__list--radio {
+  margin: 20px 0 22px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form__item {
+  margin-bottom: 13px;
+}
+// .form__name {
+//   display: inline-block;
+//   margin: 0;
+//   padding: 0;
+//   width: auto;
+//   border: 1px solid $border-grey-input;
+// }
