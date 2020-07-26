@@ -40,13 +40,13 @@
         <p class="form__text"> Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
         <fieldset class="form__section form__section-header">
           <label class="form__caption form__caption--text">Имя:<sup class="form__sup">*</sup>
-            <input class="form__name" type="text" name="name" placeholder="Барсик">
+            <input class="form__input form__name" type="text" name="name" placeholder="Барсик">
           </label>
           <label class="form__caption form__caption--text">Вес (кг):<sup class="form__sup">*</sup>
-            <input class="form__mass" type="number" name="mass" value="7">
+            <input class="form__input form__mass" type="number" name="mass" value="7">
           </label>
           <label class="form__caption form__caption--text">Возраст (лет):
-            <input class="form__age" type="number" name="age" value="7">
+            <input class="form__input form__age" type="number" name="age" value="7">
           </label>
         </fieldset>
         <fieldset class="form__section form__section-programs">
@@ -75,11 +75,11 @@
           <legend class="form__legend">Контактные данные (владельца кота)</legend>
           <label class="form__caption form__caption--text">
             Email<sup class="form__sup">*</sup>
-            <input class="form__email" type="email" name="email" placeholder="kuklachev@gmail.com">
+            <input class="form__input form__email" type="email" name="email" placeholder="kuklachev@gmail.com">
           </label>
           <label class="form__caption form__caption--text">
             Телефон:<sup class="form__sup">*</sup>
-            <input class="form__phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
+            <input class="form__input form__phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
           </label>
         </fieldset>
         <fieldset class="form__section form__section-massage">
@@ -116,20 +116,20 @@
             </li>
           </ul>
         </fieldset>
-        <button class="button button-form">Отправить заявку</button>
+        <button class="button form__button">Отправить заявку</button>
         <small class="form__required-areas">
           * — Обязательные поля
         </small>
       </form>
     </section>
-    <section class="map">
+    <section class="map map--grey">
       <h2 class="visually-hidden">Как нас найти?</h2>
-      <div class="map__wrapper">
-        <p class="map__text">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="map__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <div class="map__wrapper-img">
-          <img class="map__img" src="https://via.placeholder.com/150x150" width="" height="" alt="">
-        </div>
+      <div class="map__wrapper container">
+        <p class="map__text">Приглашаем <br> к сотрудничеству <br> дилеров!</p>
+        <p class="map__adress">ул. Большая <br> Конюшенная, д. 19/8 <br> Санкт-Петербург</p>
+      </div>
+      <div class="map__wrapper-img">
+        <img class="map__img" src="https://via.placeholder.com/150x150" width="" height="" alt="">
       </div>
     </section>
   </main>
