@@ -1,0 +1,42 @@
+.additional-product__title {
+  margin: 0;
+  padding: 13px 0;
+
+  @include special-font-normal;
+  @include text-size(16px, 16px);
+  text: {
+    transform: uppercase;
+  }
+  color: $grey-dark-hight;
+}
+
+.additional-product__table {
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+.additional-product__mass,
+.additional-product__price {
+  @include text-size(14px, 14px);
+  color: $grey-dark;
+}
+
+.additional-product__button {
+  margin-bottom: 19px;
+}
+
+.catalog-additional__bounty {
+  margin-top: 19px;
+  margin-bottom: 35px;
+}
+
+.catalog-additional__bounty-text {
+  margin: 0;
+  padding: 186px 0 0 0;
+
+  @include text-size(16px, 20px);
+  color: $basic-white;
+  text: {
+    align: center;
+  }
+}

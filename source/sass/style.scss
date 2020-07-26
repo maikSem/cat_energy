@@ -1,17 +1,19 @@
+@import "normalize.scss";
 @import "variables.scss";
 @import "mixins.scss";
 @import "fonts.scss";
 @import "blocks/header/header.scss";
 @import "blocks/header/main-nav/main-nav.scss";
 @import "blocks/main/programs/programs.scss";
+@import "blocks/main/map/map.scss";
 @import "blocks/main/catalog/catalog.scss";
 @import "blocks/main/catalog/product-item/product-item.scss";
 @import "blocks/main/catalog/catalog-additional/catalog-additional.scss";
 @import "blocks/main/catalog/catalog-additional/additional-product/additional-product.scss";
 @import "blocks/main/catalog/catalog-additional/all-products/all-products.scss";
 @import "blocks/main/advantages/advantages.scss";
-// @import "blocks/main/widget/"
-// @import "blocks/main/map/"
+@import "blocks/main/widget/widget.scss";
+@import "blocks/main/form/form.scss";
 @import "blocks/footer/footer.scss";
 @import "blocks/footer/social/social.scss";
 @import "blocks/footer/copyright/copyright.scss";

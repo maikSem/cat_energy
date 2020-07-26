@@ -1,0 +1,50 @@
+.widget {
+  min-height: 705px;
+  background: $special-grey-dark;
+}
+
+.widget__title {
+  margin: 0;
+  padding: 27px 0 33px 0;
+
+  @include special-font-normal;
+  @include text-size(36px, 40px);
+}
+
+.widget__description {
+  margin: 0;
+
+  @include text-size(14px, 18px);
+  color: $grey-dark;
+}
+
+.widget__value {
+  @include special-font-normal;
+  @include text-size(24px, 24px);
+  text: {
+    transform: uppercase;
+  }
+}
+
+.widget__key {
+  @include text-size(12px, 12px);
+  color: $grey-dark;
+}
+
+.widget__slogan {
+  @include special-font-normal;
+  @include text-size(14px, 20px);
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+}
+
+.widget__toggle-was,
+.widget__toggle-get {
+  @include special-font-normal;
+  @include text-size(16px, 20px);
+  text: {
+    transform: uppercase;
+  }
+}
