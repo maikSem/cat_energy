@@ -1,17 +1,89 @@
-.header__top {
-  min-height: 66px;
+.header {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
+
+.button {     /*Пока добавил сюда общии стили для кнопки*/
+  display: inline-block;
+  width: 100%;
+  padding: 11px 0;
+
+  @include special-font-normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic-white;
+
+  background-color: $basic-green;
+}
+
 
 .header__logo {
   display: block;
-  width: 180px;
   margin: 0;
+  outline: 3px solid black; /*обводка*/
 }
 
 .header__main {
+  width: 100%;
+  outline: 3px yellow;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.header__wrapper--img {
   min-height: 305px;
   background: url("../img/index-background-mobile@1x.jpg") 0 0 no-repeat $basic-green;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-position: right;
+  }
+}
+
+.header__wrapper--main {
+  position: relative;
+  top: -305px;
+  min-height: 480px;
+  margin-bottom: -305px;
+  background: url("../img/index-can-mobile@1x.png") center bottom no-repeat;
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+    min-height: 800px;
+    margin-bottom: 0;
+    background: url("../img/index-can-tablet@1x.jpg") center bottom no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 0;
+    order: -1;
+    width: 100%;
+    min-height: 605px;
+    margin-bottom: 0;
+    background: url("../img/index-can-desktop@1x.png") center bottom no-repeat;
+  }
 }
 
 .header__title {
@@ -22,6 +94,14 @@
   @include h1;
   text-align: center;
   color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    padding: 62px 0 41px 87px;
+
+    @include text-size(60px, 60px);
+    text-align: left;
+    color: $basic-black;
+  }
 }
 
 .header__slogan {
@@ -34,12 +114,23 @@
   text-align: center;
   text-transform: uppercase;
   color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 87px;
+
+    @include text-size(20px, 20px);
+    text-align: left;
+    color: $basic-black;
+  }
 }
 
-.header__toggle {
-  width: 24px;
-  height: 16px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.header__main-button {
+  position: absolute;
+  bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    width: 244px;
+    margin: 49px 0 0 83px;
+  }
 }

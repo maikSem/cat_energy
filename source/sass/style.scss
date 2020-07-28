@@ -18,6 +18,20 @@
 @import "blocks/footer/social/social.scss";
 @import "blocks/footer/copyright/copyright.scss";
 
+.html {
+  height: 100vh;
+}
+
+.body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content min-content;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  @include basic-font-normal;
+}
+
 .visually-hidden {
   position: absolute;
   margin: -1px;
@@ -36,33 +50,20 @@
   box-sizing: border-box;
 }
 
-.body {
-  width: 320px;
-  min-height: 100%;
-  margin: 0 auto;
-
-  @include basic-font-normal;
-}
-
 .container {
-  width: 320px;
   margin: 0 auto;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
 }
 
-.button {
-  display: inline-block;
-  width: 100%;
-  padding: 11px 0;
-
-  @include special-font-normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $basic-white;
-
-  background-color: $basic-green;
+.img {
+  max-width: 100%;
+  height: auto;
 }

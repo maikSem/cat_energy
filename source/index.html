@@ -9,12 +9,12 @@
 
 <body class="body">
   <header class="header">
-    <div class="header__top container">
-      <a class="header__logo">
-        <img class="header__logo-img" src="img/logo-mobile.svg" width="180" height="37"
-          alt="Магазин функционального питания для котов «Кэт Энерджи»">
-      </a>
-      <button class="header__toggle" type="button">
+    <a class="header__logo">
+      <img class="header__logo-img" src="img/logo-mobile.svg" width="180" height="37"
+        alt="Магазин функционального питания для котов «Кэт Энерджи»">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px" y="0px" viewBox="0 0 24 18" style="enable-background:new 0 0 24 18;" xml:space="preserve">
           <rect y="16" width="24" height="2" />
@@ -22,8 +22,6 @@
           <rect width="24" height="2" />
         </svg>
       </button>
-    </div>
-    <nav class="main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--active"><a class="main-nav__link">Главная</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
@@ -31,10 +29,13 @@
       </ul>
     </nav>
     <div class="header__main container">
-      <h1 class="header__title">Функциональное питание для котов</h1>
-      <p class="header__slogan">Занялся собой? Займись котом!</p>
+      <div class="header__wrapper header__wrapper--img"></div>
+      <div class="header__wrapper header__wrapper--main">
+        <h1 class="header__title">Функциональное <br> питание для котов</h1>
+        <p class="header__slogan">Занялся собой? Займись котом!</p>
+        <a class="button header__main-button" href="catalog.html">Подобрать программу</a>
+      </div>
     </div>
-    <a class="button" href="catalog.html">Подобрать программу</a>
   </header>
   <main class="main">
     <section class="programs container">
@@ -86,7 +87,8 @@
       <div class="widget__wrapper container">
         <h2 class="widget__title">Живой пример</h2>
         <p class="widget__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
+          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+          по
           16
           часов в день.
         </p>
@@ -103,10 +105,12 @@
         <p class="widget__slogan">Затраты на питание: 15 000 руб.</p>
         <div class="widget__cats">
           <div class="widget__cats-thick">
-            <img class="widget__cats-img thick-cat" src="https://via.placeholder.com/150x150" width="" height="" alt="">
+            <img class="img widget__cats-img thick-cat" src="https://via.placeholder.com/150x150" width="" height=""
+              alt="">
           </div>
           <div class="widget__cats-thin">
-            <img class="widget__cats-img thin-cat" src="https://via.placeholder.com/150x150" width="" height="" alt="">
+            <img class="img widget__cats-img thin-cat" src="https://via.placeholder.com/150x150" width="" height=""
+              alt="">
           </div>
           <div class="widget__toggle">
             <p class="widget__toggle-was">Было</p>
@@ -123,7 +127,7 @@
       <p class="map__adress">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
     </div>
     <div class="map__wrapper-img">
-      <img class="map__img" src="https://via.placeholder.com/150x150" width="" height="" alt="">
+      <img class="img map__img" src="https://via.placeholder.com/150x150" width="" height="" alt="">
     </div>
   </section>
   <footer class="footer">
@@ -172,7 +176,7 @@
       </div>
       <div class="footer__copyright copyright">
         <a class="copyright__link-text" href="#">HTML Academy</a>
-        <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive"><img class="copyright__img"
+        <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive"><img class="img copyright__img"
             src="#" alt="">Logo HTML Academy</a>
       </div>
     </div>
