@@ -2,21 +2,36 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "fonts.scss";
+@import "button.scss";
 @import "blocks/header/header.scss";
-@import "blocks/header/main-nav/main-nav.scss";
-@import "blocks/main/programs/programs.scss";
-@import "blocks/main/map/map.scss";
+@import "blocks/header/main-nav.scss";
+@import "blocks/main/programs.scss";
+@import "blocks/main/map.scss";
 @import "blocks/main/catalog/catalog.scss";
-@import "blocks/main/catalog/product-item/product-item.scss";
-@import "blocks/main/catalog/catalog-additional/catalog-additional.scss";
-@import "blocks/main/catalog/catalog-additional/additional-product/additional-product.scss";
-@import "blocks/main/catalog/catalog-additional/all-products/all-products.scss";
-@import "blocks/main/advantages/advantages.scss";
-@import "blocks/main/widget/widget.scss";
-@import "blocks/main/form/form.scss";
+@import "blocks/main/catalog/product-item.scss";
+@import "blocks/main/catalog/catalog-additional.scss";
+@import "blocks/main/catalog/additional-product.scss";
+@import "blocks/main/advantages.scss";
+@import "blocks/main/widget.scss";
+@import "blocks/main/form.scss";
 @import "blocks/footer/footer.scss";
-@import "blocks/footer/social/social.scss";
-@import "blocks/footer/copyright/copyright.scss";
+@import "blocks/footer/social.scss";
+@import "blocks/footer/copyright.scss";
+
+.html {
+  height: 100vh;
+}
+
+.body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content min-content;
+  min-width: 320px;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  @include basic-font-normal;
+}
 
 .visually-hidden {
   position: absolute;
@@ -36,33 +51,19 @@
   box-sizing: border-box;
 }
 
-.body {
-  width: 320px;
-  min-height: 100%;
-  margin: 0 auto;
-
-  @include basic-font-normal;
-}
-
 .container {
-  width: 320px;
-  margin: 0 auto;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
 }
 
-.button {
-  display: inline-block;
-  width: 100%;
-  padding: 11px 0;
-
-  @include special-font-normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $basic-white;
-
-  background-color: $basic-green;
+.img {
+  max-width: 100%;
+  height: auto;
 }

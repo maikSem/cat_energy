@@ -1,6 +1,24 @@
-.widget {
-  min-height: 705px;
+// .widget {
+//   min-height: 705px;
+// }
+
+.widget__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.widget__header {
   background: $special-grey-dark;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $special-grey-dark;
+  }
 }
 
 .widget__title {
@@ -9,6 +27,10 @@
 
   @include special-font-normal;
   @include text-size(36px, 40px);
+
+  @media (min-width: $desktop-width) {
+    background: $basic-white;
+  }
 }
 
 .widget__description {
@@ -38,6 +60,10 @@
     align: center;
     transform: uppercase;
   }
+}
+
+.widget__cats {
+  background: $special-grey-dark;
 }
 
 .widget__toggle-was,

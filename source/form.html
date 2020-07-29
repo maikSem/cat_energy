@@ -3,18 +3,19 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="body">
   <header class="header">
-    <div class="header__top container">
-      <a class="header__logo">
-        <img class="header__logo-img" src="img/logo-mobile.svg" width="180" height="37"
-          alt="Магазин функционального питания для котов «Кэт Энерджи»">
-      </a>
-      <button class="header__toggle" type="button">
+    <a class="header__logo">
+      <img class="header__logo-img" src="img/logo-mobile.svg" width="180" height="37"
+        alt="Магазин функционального питания для котов «Кэт Энерджи»">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           x="0px" y="0px" viewBox="0 0 24 18" style="enable-background:new 0 0 24 18;" xml:space="preserve">
           <rect y="16" width="24" height="2" />
@@ -22,8 +23,6 @@
           <rect width="24" height="2" />
         </svg>
       </button>
-    </div>
-    <nav class="main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--active"><a class="main-nav__link">Главная</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
@@ -125,12 +124,12 @@
   </main>
   <section class="map map--grey">
     <h2 class="visually-hidden">Как нас найти?</h2>
-    <div class="map__wrapper container">
-      <p class="map__text">Приглашаем <br> к сотрудничеству <br> дилеров!</p>
-      <p class="map__adress">ул. Большая <br> Конюшенная, д. 19/8 <br> Санкт-Петербург</p>
+    <div class="map__wrapper">
+      <p class="map__text">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
+      <p class="map__adress">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
     </div>
     <div class="map__wrapper-img">
-      <img class="map__img" src="https://via.placeholder.com/150x150" width="" height="" alt="">
+      <!-- <img class="img map__img" src="https://via.placeholder.com/150x150" width="" height="" alt=""> -->
     </div>
   </section>
   <footer class="footer">

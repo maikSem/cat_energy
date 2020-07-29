@@ -1,14 +1,26 @@
 .programs__list {
   margin: 0;
+  margin-top: 22px;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 82px;
+  }
 }
 
 .programs__item {
+  margin-bottom: 20px;
   padding: 0 20px 1px 20px;
   list-style: none;
   background-color: $basic-grey;
   border-bottom: 1px solid transparent;
   overflow: hidden;
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
+  }
 }
 
 .programs__title {
@@ -16,10 +28,7 @@
   padding: 30px 0 30px 10px;
 
   @include special-font-normal;
-  font: {
-    size: 24px;
-  }
-  line-height: 37px;
+  @include text-size(24px, 37px);
   text: {
     align: center;
     transform: uppercase;
@@ -29,10 +38,8 @@
 .programs__text {
   margin: 0;
   padding: 0 13px 22px 0;
-  font: {
-    size: 14px;
-  }
-  line-height: 18px;
+
+  @include text-size(14px, 18px);
   color: $grey-dark;
   border-bottom: 1px solid #d9d9d9;
 }
@@ -42,10 +49,7 @@
   margin: 19px 0 22px 20px;
 
   @include special-font-normal;
-  font: {
-    size: 16px;
-  }
-  line-height: 16px;
+  @include text-size(16px, 16px);
   text: {
     decoration: none;
     transform: uppercase;

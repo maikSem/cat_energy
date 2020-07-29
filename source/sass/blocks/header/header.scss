@@ -1,17 +1,28 @@
-.header__top {
-  min-height: 66px;
+.header {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .header__logo {
   display: block;
-  width: 180px;
   margin: 0;
+  outline: 3px solid black;
 }
 
 .header__main {
-  min-height: 305px;
-  background: url("../img/index-background-mobile@1x.jpg") 0 0 no-repeat $basic-green;
-  background-size: cover;
+  width: 100%;
+  min-height: 480px; /*Временно*/
+  outline: 3px solid red;
+  background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+  }
 }
 
 .header__title {
@@ -21,7 +32,15 @@
   @include special-font-normal;
   @include h1;
   text-align: center;
-  color: $basic-white;
+  // color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    padding: 62px 0 41px 87px;
+
+    @include text-size(60px, 60px);
+    text-align: left;
+    color: $basic-black;
+  }
 }
 
 .header__slogan {
@@ -33,13 +52,23 @@
   line-height: 14px;
   text-align: center;
   text-transform: uppercase;
-  color: $basic-white;
+  // color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 87px;
+
+    @include text-size(20px, 20px);
+    text-align: left;
+    color: $basic-black;
+  }
 }
 
-.header__toggle {
-  width: 24px;
-  height: 16px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.header__main-button {
+  background-color: $basic-black; /* Временно */
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-green;
+    width: 244px;
+    margin: 49px 0 0 83px;
+  }
 }

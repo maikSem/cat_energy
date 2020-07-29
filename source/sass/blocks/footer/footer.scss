@@ -3,6 +3,11 @@
   background-color: $basic-grey;
   border-top: 1px;
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer__link-logo {

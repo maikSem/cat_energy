@@ -1,0 +1,51 @@
+.main-nav {
+  outline: 3px solid red; /*обводка*/
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__item {
+  text-align: center;
+  list-style: none;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 21px 0 23px 0;
+
+  @include special-font-medium;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $basic-black;
+  border-bottom: 1px solid $border-grey;
+
+  @media (min-width: $tablet-width) {
+    @include special-font-normal;
+    @include text-size(18px, 24px);
+  }
+}
