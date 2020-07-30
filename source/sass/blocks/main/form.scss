@@ -1,5 +1,19 @@
+.form {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // grid-template-rows: repeat(6, auto);
+  }
+}
+
 .form-order {
   @include special-font-normal;
+}
+
+.form__header {
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / -1;
+  }
 }
 
 .form__title {
@@ -7,6 +21,10 @@
 
   @include text-size(36px, 36px);
   font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    @include text-size(60px, 60px);
+  }
 }
 
 .form__text {
@@ -16,20 +34,56 @@
   text: {
     transform: uppercase;
   }
+
+  @media (min-width: $tablet-width) {
+    @include text-size(20px, 30px);
+  }
 }
 
 .form__section {
   margin: 0;
   padding: 0;
-  border: none;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 61px;
+  }
+}
+
+.form__section-header {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+  }
 }
 
 .form__section-programs {
   border-top: 1px solid $border-grey;
   border-bottom: 1px solid $border-grey;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+  }
+}
+
+.form__section-contact {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+  }
+}
+
+.form__section-massage {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+  }
+}
+
+.form__section-additional {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+  }
 }
 
 .form__caption {
+
   margin-bottom: 13px;
 
   @include input-caption;
@@ -77,6 +131,20 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.form__item--checkbox {
+  border: 2px solid red;
 }
 
 .form__legend {
@@ -103,6 +171,10 @@
 
 .form__button {
   border: none;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 82px;
+  }
 }
 
 .form__required-areas {
@@ -113,5 +185,9 @@
   @include text-size(14px, 16px);
   text: {
     align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
