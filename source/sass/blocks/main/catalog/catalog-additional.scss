@@ -1,3 +1,10 @@
+.catalog-additional__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .catalog-additional__title {
   margin: 0;
   padding: 28px 0 35px 0;
@@ -5,16 +12,29 @@
   @include special-font-normal;
   @include text-size(24px, 24px);
   border-bottom: 1px solid $gray-light;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+  }
 }
 
 .catalog-additional__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 4;
+  }
 }
 
 .catalog-additional__item {
-  border-bottom: 1px solid $border-grey;
+  border: 1px solid $border-grey;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;  /*Временно*/
+  }
 }
 
 .catalog-additional__bounty {

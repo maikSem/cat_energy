@@ -12,7 +12,6 @@
 
 .additional-product__table {
   padding-bottom: 15px;
-  width: 100%;
 }
 
 .additional-product__mass,
@@ -23,11 +22,20 @@
 
 .additional-product__button {
   margin-bottom: 19px;
+
+  @media (min-width: $desktop-width) {
+    width: 27%;
+  }
 }
 
 .catalog-additional__bounty {
   margin-top: 19px;
   margin-bottom: 35px;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 4 / 5;
+    margin: 0;
+  }
 }
 
 .catalog-additional__bounty-text {
@@ -38,5 +46,9 @@
   color: $basic-white;
   text: {
     align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 184px;
   }
 }
