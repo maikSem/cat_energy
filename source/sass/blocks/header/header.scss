@@ -1,74 +1,28 @@
 .header {
   position: relative;
+  padding-top: 12px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
+    padding-top: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 53px;
   }
 }
 
 .header__logo {
   display: block;
   margin: 0;
-  outline: 3px solid black;
-}
-
-.header__main {
-  width: 100%;
-  min-height: 480px; /*Временно*/
-  outline: 3px solid red;
-  background-color: $basic-green;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $border-grey;
 
   @media (min-width: $tablet-width) {
-    background-color: $basic-white;
-  }
-}
-
-.header__title {
-  margin: 0;
-  padding-top: 27px;
-
-  @include special-font-normal;
-  @include h1;
-  text-align: center;
-  // color: $basic-white;
-
-  @media (min-width: $tablet-width) {
-    padding: 62px 0 41px 87px;
-
-    @include text-size(60px, 60px);
-    text-align: left;
-    color: $basic-black;
-  }
-}
-
-.header__slogan {
-  margin: 0;
-  padding-top: 25px;
-
-  @include special-font-normal;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: center;
-  text-transform: uppercase;
-  // color: $basic-white;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 0 0 87px;
-
-    @include text-size(20px, 20px);
-    text-align: left;
-    color: $basic-black;
-  }
-}
-
-.header__main-button {
-  background-color: $basic-black; /* Временно */
-
-  @media (min-width: $tablet-width) {
-    background-color: $basic-green;
-    width: 244px;
-    margin: 49px 0 0 83px;
+    padding-bottom: 0;
+    border: none;
   }
 }

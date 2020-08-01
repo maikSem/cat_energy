@@ -1,0 +1,108 @@
+.top {
+  position: relative;
+  padding-top: 27px;
+  width: 100%;
+  min-height: 480px; /*Временно*/
+  outline: 3px solid red;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    height: 305px;
+    background: url("../img/index-background-mobile@1x.jpg") no-repeat;
+    background-size: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 62px;
+    background-color: $basic-white;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 114px;
+
+    &::after {
+      top: -102px;
+      left: 50%;
+      bottom: 0;
+      z-index: 1;
+      display: block;
+      height: auto;
+    }
+  }
+}
+
+.top__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  @include special-font-normal;
+  @include h1;
+  text-align: center;
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 41px 87px;
+
+    @include text-size(60px, 60px);
+    text-align: left;
+    color: $basic-black;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 40px 81px;
+  }
+}
+
+.top__slogan {
+  margin: 0;
+  margin-bottom: 29px;
+
+  @include special-font-normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 49px;
+    padding: 0 0 0 87px;
+
+    @include text-size(20px, 20px);
+    text-align: left;
+    color: $basic-black;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 52px;
+  }
+}
+
+.top__img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.top__button {
+  background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    width: 244px;
+    margin-left: 83px;
+  }
+}
