@@ -36,6 +36,16 @@
   background: url("../img/icon-mobile-menu.svg") no-repeat;
 }
 
+.main-nav--close .main-nav__list {
+  display: none;
+}
+
+.main-nav--opened  .main-nav__list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
 .main-nav__list {
   margin: 0;
   padding: 0;
