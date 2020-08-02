@@ -40,7 +40,7 @@
   display: none;
 }
 
-.main-nav--opened  .main-nav__list {
+.main-nav--opened .main-nav__list {
   @media (min-width: $tablet-width) {
     display: flex;
   }

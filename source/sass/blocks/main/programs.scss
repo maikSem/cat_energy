@@ -1,5 +1,6 @@
 .programs__wrapper {
   padding-top: 22px;
+  padding-bottom: 27px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -26,11 +27,15 @@
 
 .programs__item {
   margin-bottom: 20px;
-  padding: 30px 20px 1px 20px;
+  padding: 30px 20px 0 20px;
   list-style: none;
   background-color: $basic-grey;
   border-bottom: 1px solid transparent;
   overflow: hidden;
+
+  &:last-child {
+    margin: 0;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 77px 53px 0 53px;
@@ -56,6 +61,8 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 20px 24px 0;
+
+    @include text-size(36px, 36px);
     text-align: left;
   }
 
@@ -77,6 +84,9 @@
     margin: 0;
     padding: 0 0 48px 0;
     width: 63%;
+
+    @include text-size(16px, 24px);
+    color: $basic-black;
     border: none;
   }
 
@@ -97,6 +107,10 @@
     transform: uppercase;
   }
   color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    @include text-size(20px, 30px);
+  }
 
   @media (min-width: $desktop-width) {
     margin-top: auto;
