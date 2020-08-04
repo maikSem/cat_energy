@@ -3,7 +3,6 @@
   padding-top: 27px;
   width: 100%;
   min-height: 480px; /*Временно*/
-  outline: 3px solid red;
 
   &::after {
     position: absolute;
@@ -19,6 +18,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 62px;
+    min-height: 870px;  /*Временно*/
     background-color: $basic-white;
 
     &::after {
@@ -28,6 +28,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 114px;
+    min-height: 583px;  /*Временно*/
 
     &::after {
       top: -102px;
@@ -84,6 +85,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 52px;
+    padding: 0 0 0 81px;
   }
 }
 
@@ -100,12 +102,19 @@
 
 .top__button {
   background-color: $basic-green;
+  margin-top: 120px;  /*Временно*/
 
   @media (min-width: $tablet-width) {
+    margin-top: 0; /*Временно*/
     margin-left: 83px;
     padding: 14px 0;
     width: 244px;
+    height: 54px;
 
     @include text-size(20px, 20px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 81px;
   }
 }

@@ -13,10 +13,17 @@
   &:active {
     opacity: 0.3;
   }
+  // @media (min-width: $tablet-width) {
+  //   align-self: flex-start;
+  // }
 }
 
 .copyright__link-logo {
   margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 22px;
+  }
 }
 
 .copyright__svg path {

@@ -1,10 +1,20 @@
 .map {
   position: relative;
+  // min-height: 476px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 601px;  /*Временно*/
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 400px; /*Временно*/
+  }
 }
 
 .map__wrapper {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     padding: 0 41px;

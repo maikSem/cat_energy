@@ -61,7 +61,21 @@
   }
 }
 
+.advantages__item--clock {
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    br {
+      display: block;
+    }
+  }
+}
+
 .advantages__description {
+  display: flex;
+  align-items: center;
   margin: 0;
   padding-left: 80px;
   min-height: 60px;
@@ -79,6 +93,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    display: block;
     padding: 151px 0 57px 0;
 
     @include text-size(16px, 24px);

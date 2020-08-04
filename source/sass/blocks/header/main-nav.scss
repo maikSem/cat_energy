@@ -7,11 +7,11 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 25px;
+  top: 23px;
   right: 23px;
   z-index: 2;
-  width: 24px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border: none;
   cursor: pointer;
 
@@ -33,6 +33,8 @@
 }
 
 .main-nav--close .main-nav__toggle {
+  width: 24px;
+  height: 16px;
   background: url("../img/icon-mobile-menu.svg") no-repeat;
 }
 
@@ -73,7 +75,7 @@
 .main-nav__link {
   position: relative;
   display: block;
-  padding: 22px 20px 24px 20px;
+  padding: 22px 20px 23px 20px;
 
   @include special-font-medium;
   font-size: 20px;
@@ -100,7 +102,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    color: $basic-white;
+    color: $basic-black; /*Временно*/
+
+    @include text-size(20px, 30px);
   }
 }
 

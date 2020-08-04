@@ -8,6 +8,11 @@
     padding-top: 55px;
     padding-bottom: 61px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 57px;
+    padding-bottom: 58px;
+  }
 }
 
 .footer__link-logo {
@@ -43,14 +48,16 @@
   @media (min-width: $tablet-width) {
     display: block;
     padding: 0;
+    padding-left: 18px;
     border: none;
   }
 }
 
 .footer__copyright {
-  padding: 22px 0;
+  padding: 20px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    height: 34px;
   }
 }

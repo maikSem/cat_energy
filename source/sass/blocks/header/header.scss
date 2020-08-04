@@ -7,11 +7,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 24px;
+    padding-top: 30px;  /*Пока 30пх, когда вставлю лого-планшета, поменяю на 24пх*/
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 53px;
+    padding-top: 56px; /*Пока 56пх, когда вставлю лого-планшета, поменяю на 53пх*/
   }
 }
 
@@ -19,10 +19,18 @@
   display: block;
   margin: 0;
   padding-bottom: 15px;
-  border-bottom: 1px solid $border-grey;
+  border-bottom: 2px solid $border-grey;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 0;
     border: none;
+
+    src: url("img/logo-tablet.svg");
+  }
+}
+
+.header__logo-img {
+  @media (min-width: $tablet-width) {
+    src: url("img/logo-tablet.svg");
   }
 }

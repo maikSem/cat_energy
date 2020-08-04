@@ -1,6 +1,6 @@
 .additional-product__title {
   margin: 0;
-  padding: 13px 0;
+  padding: 12px 0 13px 0;
 
   @include special-font-normal;
   @include text-size(16px, 16px);
@@ -21,35 +21,14 @@
   color: $grey-dark;
 }
 
+.additional-product__price {
+  margin-left: auto;
+}
+
 .additional-product__button {
   margin-bottom: 19px;
 
   @media (min-width: $desktop-width) {
     width: 27%;
-  }
-}
-
-.catalog-additional__bounty {
-  margin-top: 19px;
-  margin-bottom: 35px;
-
-  @media (min-width: $desktop-width) {
-    grid-column: 4 / 5;
-    margin: 0;
-  }
-}
-
-.catalog-additional__bounty-text {
-  margin: 0;
-  padding: 186px 0 0 0;
-
-  @include text-size(16px, 20px);
-  color: $basic-white;
-  text: {
-    align: center;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 184px;
   }
 }

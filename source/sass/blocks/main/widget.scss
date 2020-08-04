@@ -1,6 +1,15 @@
-// .widget {
-//   min-height: 705px;
-// }
+.widget {
+  min-height: 705px; /*Временно*/
+  background: $special-grey-dark;
+
+  @media (min-width: $tablet-width) {
+    min-height: 1082px; /*Временно*/
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 656px; /*Временно*/
+  }
+}
 
 .widget__wrapper {
   @media (min-width: $desktop-width) {
@@ -10,8 +19,6 @@
 }
 
 .widget__header {
-  background: $special-grey-dark;
-
   @media (min-width: $tablet-width) {
     background-color: $basic-white;
   }
