@@ -1,5 +1,5 @@
 .widget {
-  min-height: 705px; /*Временно*/
+  min-height: 703px; /*Временно*/
   background: $special-grey-dark;
 
   @media (min-width: $tablet-width) {
@@ -42,25 +42,48 @@
 
 .widget__description {
   margin: 0;
+  margin-bottom: 25px;
 
   @include text-size(14px, 18px);
+  text-align: left;
   color: $grey-dark;
 }
 
+.widget__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.widget__item {
+  display: flex;
+  flex-direction: column;
+}
+
 .widget__value {
+  padding: 15px 0 11px 0;
+
   @include special-font-normal;
   @include text-size(24px, 24px);
   text: {
+    align: center;
     transform: uppercase;
   }
 }
 
 .widget__key {
+  margin: 0;
+
   @include text-size(12px, 12px);
+  text-align: center;
   color: $grey-dark;
 }
 
 .widget__slogan {
+  margin: 0;
+
   @include special-font-normal;
   @include text-size(14px, 20px);
   text: {

@@ -1,6 +1,6 @@
 .map {
   position: relative;
-  // min-height: 476px;
+  min-height: 362px;
 
   @media (min-width: $tablet-width) {
     min-height: 601px;  /*Временно*/
@@ -14,7 +14,7 @@
 .map__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 22px;
+  padding: 28px 0 22px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0 41px;
@@ -28,6 +28,30 @@
     background-color: $basic-white;
   }
 }
+
+.map__text {
+  margin: 0;
+
+  @include special-font-normal;
+  @include text-size(16px, 21px); /* По макету 18пх*/
+  text: {
+    transform: uppercase;
+  }
+  color: $special-black;
+
+  @media (min-width: $desktop-width) {
+    padding-right: 87px;
+  }
+}
+
+.map__adress {
+  margin: 0;
+  padding: 3px;
+
+  @include text-size(14px, 20px);
+  color: $grey-dark;
+}
+
 
 .map__wrapper-img {
   height: 362px;
@@ -44,28 +68,6 @@
     background: url("../img/bg-map-desktop@1x.png") 0 0 no-repeat;
     background-size: cover;
   }
-}
-
-.map__text {
-  margin: 0;
-
-  @include special-font-normal;
-  @include text-size(16px, 18px);
-  text: {
-    transform: uppercase;
-  }
-  color: $special-black;
-
-  @media (min-width: $desktop-width) {
-    padding-right: 87px;
-  }
-}
-
-.map__adress {
-  margin: 0;
-
-  @include text-size(14px, 20px);
-  color: $grey-dark;
 }
 
 .map--grey {

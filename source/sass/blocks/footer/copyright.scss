@@ -4,6 +4,8 @@
 }
 
 .copyright__link-text {
+  margin-bottom: 3px;
+
   @include text-size(16px, 18px);
   color: $grey-dark;
   text: {
