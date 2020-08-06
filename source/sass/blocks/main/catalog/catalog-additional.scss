@@ -1,5 +1,9 @@
 .catalog-additional__wrapper {
+  padding-top: 28px;
+
   @media (min-width: $tablet-width) {
+    padding-top: 0;
+    // padding-left: 37px;
     min-height: 1018px; /*Временно*/
   }
 
@@ -12,14 +16,17 @@
 
 .catalog-additional__title {
   margin: 0;
-  padding: 0 0 34px 37px;
+  padding: 0 0 34px 0;
 
   @include special-font-normal;
   @include text-size(24px, 24px);
   border-bottom: 1px solid $gray-light;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 80px;
+
     @include text-size(36px, 36px);
+    border: none;
   }
 
   @media (min-width: $desktop-width) {
@@ -57,6 +64,12 @@
   min-height: 289px;
   background: url("../img/gift-photo-mobile@1x.jpg") 0 0 no-repeat;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 69px;
+    margin-bottom: 76px;
+    min-height: 200px; /*Временно*/
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 4 / 5;

@@ -2,14 +2,12 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 11px;
+  row-gap: 12px;
   padding: 19px 0 25px 0;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px 36px 40px 36px;
+    display: block;
+    padding: 10px 36px 40px 36px;
 
     &::after {
       position: absolute;
@@ -36,10 +34,9 @@
   background-color: red;
 
   @media (min-width: $tablet-width) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 34px;
+    margin-left: auto;
+    margin-right: auto;
     height: 200px; /*Временно*/
   }
 
@@ -79,12 +76,20 @@
       display: block;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+
+    @include text-size(20px, 21px);
+    border-collapse: unset;
+  }
 }
 
 .product-item__features {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   margin: 0;
+  margin-bottom: 8px;
 
   @include basic-font-normal;
   @include text-size(12px, 16px);
@@ -92,7 +97,7 @@
   border-collapse: collapse;
 
   @media (min-width: $tablet-width) {
-    align-self: stretch;
+    display: block;
     margin-bottom: 33px;
 
     @include text-size(16px, 16px);
@@ -105,9 +110,11 @@
 
 .product-item__line {
   display: flex;
+  margin-bottom: -2px;
 
   @media (min-width: $tablet-width) {
     align-items: center;
+    margin-bottom: 0;
     min-height: 31px;
     border-bottom: 1px solid $gray-light;
   }
@@ -115,15 +122,20 @@
 
 .product-item__value {
   margin-left: auto;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 4px;
+  }
 }
 
 .product-item__button {
   grid-column: 1 / -1;
   grid-row: 3 / 4;
 
-  @media (min-width: $tablet-width) {
-    @include text-size(16px, 20px);
-  }
+  font-size: 16px;
+  // @media (min-width: $tablet-width) {
+  //   @include text-size(16px, 20px);
+  // }
 
   // @media (min-width: $desktop-width) {
   //   margin-left: 10px;
