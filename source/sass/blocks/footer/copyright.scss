@@ -1,7 +1,42 @@
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
 .copyright__link-text {
+  margin-bottom: 3px;
+
   @include text-size(16px, 18px);
   color: $grey-dark;
   text: {
     decoration: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+  // @media (min-width: $tablet-width) {
+  //   align-self: flex-start;
+  // }
+}
+
+.copyright__link-logo {
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 22px;
+  }
+}
+
+.copyright__svg path {
+  fill: $gray-middle;
+
+  &:hover {
+    fill: $basic-green;
+  }
+
+  &:active {
+    fill: $basic-green;
+    opacity: 0.3;
   }
 }
