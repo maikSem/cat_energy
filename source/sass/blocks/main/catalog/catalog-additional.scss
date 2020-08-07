@@ -23,6 +23,7 @@
   border-bottom: 1px solid $gray-light;
 
   @media (min-width: $tablet-width) {
+    padding-left: 37px;
     padding-bottom: 80px;
 
     @include text-size(36px, 36px);
@@ -85,6 +86,12 @@
   color: $basic-white;
   text: {
     align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    float: right;
+    padding: 71px 124px 69px 0;
+    text-align: left;
   }
 
   @media (min-width: $desktop-width) {

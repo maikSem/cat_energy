@@ -17,7 +17,7 @@
   padding: 28px 0 22px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 0 41px;
+    padding: 63px 0 58px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -33,13 +33,20 @@
   margin: 0;
 
   @include special-font-normal;
-  @include text-size(16px, 21px); /* По макету 18пх*/
+  @include text-size(16px, 22px); /* По макету 18пх*/
   text: {
     transform: uppercase;
   }
   color: $special-black;
 
+  @media (min-width: $tablet-width) {
+    margin-left: 41px;
+
+    @include text-size(20px, 25px);
+  }
+
   @media (min-width: $desktop-width) {
+    margin-left: 0;
     padding-right: 87px;
   }
 }
@@ -50,8 +57,28 @@
 
   @include text-size(14px, 20px);
   color: $grey-dark;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+    padding: 0 42px 0 0;
+
+    @include text-size(16px, 20px);
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    padding-left: 10px;
+    text-align: left;
+  }
 }
 
+.map__city {
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding-top: 17px;
+  }
+}
 
 .map__wrapper-img {
   height: 362px;

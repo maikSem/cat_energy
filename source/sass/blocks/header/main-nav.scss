@@ -102,6 +102,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 12px 0 7px 0;
     color: $basic-black; /*Временно*/
 
     @include text-size(20px, 30px);

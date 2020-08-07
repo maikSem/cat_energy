@@ -1,3 +1,9 @@
+.advantages {
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $border-grey;
+  }
+}
+
 .advantages__wrapper {
   padding-bottom: 42px;
 

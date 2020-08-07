@@ -12,6 +12,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 60px; /*Пока 56пх, когда вставлю лого-планшета, поменяю на 53пх*/
+    padding-bottom: 5px;
   }
 }
 
@@ -20,6 +21,10 @@
   margin: 0;
   padding-bottom: 15px;
   border-bottom: 1px solid $border-grey;
+
+  // @media (max-width: $tablet-width) {
+  //   padding-bottom: 12px;
+  // }
 
   @media (min-width: $tablet-width) {
     padding-bottom: 0;

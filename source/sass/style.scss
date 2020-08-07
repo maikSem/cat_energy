@@ -72,6 +72,12 @@
   }
 }
 
+.container--map {
+  @media (min-width: $desktop-width) {
+    padding: 62px 89px 57px 76px;
+  }
+}
+
 .img {
   max-width: 100%;
   height: auto;
