@@ -10,6 +10,10 @@
       border-bottom: 1px solid $special-grey;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0 16px 0;
+  }
 }
 
 .additional-product__title {
@@ -28,6 +32,11 @@
 
     @include text-size(20px, 20px);
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-top: 8px;
+  }
 }
 
 .additional-product__features {
@@ -44,6 +53,12 @@
 
     @include text-size(16px, 20px);
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 40px;
+    padding-top: 7px;
+    width: 286px;
+  }
 }
 
 .additional-product__price {
@@ -51,6 +66,10 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
   }
 }
 
@@ -63,6 +82,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0;
     width: 27%;
   }
 }

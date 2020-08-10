@@ -4,13 +4,15 @@
   @media (min-width: $tablet-width) {
     padding-top: 0;
     // padding-left: 37px;
-    min-height: 1018px; /*Временно*/
+    // min-height: 1018px; /*Временно*/
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    min-height: 492px; /*Временно*/
+    column-gap: 80px;
+    padding-bottom: 90px; /*86*/
+
   }
 }
 
@@ -32,6 +34,8 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
+    padding: 0;
+    margin-bottom: 81px;
   }
 }
 
@@ -95,6 +99,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 184px;
+    float: none;
+    padding: 184px 0 42px 0;
+    text-align: center;
   }
 }

@@ -34,7 +34,7 @@
   background-color: red;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 33px;
+    margin-bottom: 34px;
     margin-left: auto;
     margin-right: auto;
     height: 200px; /*Временно*/
@@ -78,7 +78,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 22px;
+    margin-bottom: 23px; /*22px*/
 
     @include text-size(20px, 21px);
     border-collapse: unset;

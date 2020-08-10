@@ -80,7 +80,7 @@
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     margin-bottom: 54px;
-    padding-right: 5px;
+    padding-right: 10px;
 
     @include text-size(16px, 24px);
 
@@ -119,10 +119,10 @@
 
   @media (min-width: $tablet-width) {
     min-width: 160px;
-  }
 
-  &:not(:first-child) {
-    margin-left: 42px;
+    &:not(:first-child) {
+      margin-left: 42px;
+    }
   }
 }
 
