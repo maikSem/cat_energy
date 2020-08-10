@@ -32,18 +32,24 @@
       <form class="form container" action="https://echo.htmlacademy.ru" method="get">
         <div class="form__header">
           <h2 class="form__title">Подбор программы</h2>
-          <p class="form__text"> Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
+          <p class="form__text"> Заполните анкету,и мы подберем <br> программу питания для вашего кота</p>
         </div>
         <fieldset class="form__section form__section-header">
-          <label class="form__caption form__caption--text">Имя:<sup class="form__sup">*</sup>
-            <input class="form__input form__name" type="text" name="name" placeholder="Барсик">
-          </label>
-          <label class="form__caption form__caption--text">Вес (кг):<sup class="form__sup">*</sup>
-            <input class="form__input form__mass" type="number" name="mass" value="7">
-          </label>
-          <label class="form__caption form__caption--text">Возраст (лет):
-            <input class="form__input form__age" type="number" name="age" value="7">
-          </label>
+          <ul class="form__list form__list--information">
+            <li class="form__item form__item--text">
+              <label class="form__caption form__caption--text" for="name">Имя:<sup class="form__sup">*</sup></label>
+              <input class="form__input form__name" type="text" name="name" id="name" placeholder="Барсик">
+            </li>
+            <li class="form__item form__item--text">
+              <label class="form__caption form__caption--text" for="mass">Вес (кг):<sup
+                  class="form__sup">*</sup></label>
+              <input class="form__input form__mass" type="number" name="mass" id="mass" value="7">
+            </li>
+            <li class="form__item form__item--text">
+              <label class="form__caption form__caption--text" for="age">Возраст (лет):</label>
+              <input class="form__input form__age" type="number" name="age" id="age" value="7">
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="form__section form__section-programs">
           <ul class="form__list form__list--radio">
@@ -69,22 +75,27 @@
         </fieldset>
         <fieldset class="form__section form__section-contact">
           <legend class="form__legend">Контактные данные (владельца кота)</legend>
-          <label class="form__caption form__caption--text">
-            Email<sup class="form__sup">*</sup>
-            <input class="form__input form__email" type="email" name="email" placeholder="kuklachev@gmail.com">
-          </label>
-          <label class="form__caption form__caption--text">
-            Телефон:<sup class="form__sup">*</sup>
-            <input class="form__input form__phone" type="tel" name="phone" placeholder="8 (960) 900-60-90">
-          </label>
+          <ul class="form__list form__list--email">
+            <li class="form__item form__item--email">
+              <label class="form__caption form__caption--text" for="email">
+                E-mail<sup class="form__sup">*</sup></label>
+              <input class="form__input form__email" type="email" name="email" id="email"
+                placeholder="kuklachev@gmail.com">
+            </li>
+            <li class="form__item form__item--phone">
+              <label class="form__caption form__caption--text" for="phone">
+                Телефон:<sup class="form__sup">*</sup></label>
+              <input class="form__input form__phone" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="form__section form__section-massage">
           <legend class="form__legend">Комментарий</legend>
-          <textarea class="form__textarea" cols="30" rows="10" name="message"
+          <textarea class="form__textarea" cols="30" rows="8" name="message"
             placeholder="Расскажите обо всех повАдках кота"></textarea>
         </fieldset>
         <fieldset class="form__section form__section-additional">
-          <legend class="form__legend">Дополнительно</legend>
+          <legend class="form__legend form__legend--additional">Дополнительно</legend>
           <ul class="form__list form__list--checkbox">
             <li class="form__item form__item--checkbox">
               <label class="form__caption form__caption--checkbox">
@@ -119,7 +130,7 @@
       </form>
     </section>
   </main>
-  <section class="map map--grey">
+  <section class="map map--grey container">
     <h2 class="visually-hidden">Как нас найти?</h2>
     <div class="map__wrapper">
       <p class="map__text">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
