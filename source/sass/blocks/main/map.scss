@@ -33,7 +33,7 @@
   margin: 0;
 
   @include special-font-normal;
-  @include text-size(16px, 22px); /* По макету 18пх*/
+  @include text-size(16px, 20px); /* По макету 18пх*/
   text: {
     transform: uppercase;
   }

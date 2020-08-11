@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 12px;
-  padding: 19px 0 25px 0;
+  padding: 19px 0 24px 0;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -110,7 +110,6 @@
 
 .product-item__line {
   display: flex;
-  margin-bottom: -2px;
 
   @media (min-width: $tablet-width) {
     align-items: center;
