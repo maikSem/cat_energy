@@ -88,7 +88,7 @@
   border-bottom: 1px solid $border-grey;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 75px;
+    margin-bottom: 71px;
     border: 1px solid $border-grey;
   }
 
@@ -159,7 +159,7 @@
   padding: 26px 0 0 45px;
 
   @media (min-width: $tablet-width) {
-    padding: 29px 0 0 88px;
+    padding: 27px 0 0 88px;
   }
 }
 
@@ -220,7 +220,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 16px 10px 11px 19px;
+    padding: 14px 10px 14px 19px;
 
     &::placeholder {
       @include text-size(20px, 30px);
@@ -273,6 +273,8 @@
   margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+
     &:last-child {
       margin-bottom: 30px;
     }
@@ -309,7 +311,7 @@
 .form__mass,
 .form__age {
   @media (min-width: $tablet-width) {
-    padding: 11px 10px 11px 20px;
+    padding: 10px 10px 11px 20px;
 
     @include special-font-normal;
     @include text-size(20px, 30px);
@@ -349,6 +351,7 @@
   padding-bottom: 39px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 0;
     padding-bottom: 62px;
   }
 }
@@ -387,7 +390,7 @@
   @media (min-width: $tablet-width) {
     margin-left: 41px;
     margin-right: 61px;
-    padding: 13px 0;
+    padding: 14px 0;
     width: 39.75%;
     font-size: 20px;
   }
@@ -395,6 +398,7 @@
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
     margin: 0;
+    margin-top: 5px;
     margin-bottom: 14px;
     padding-top: 16px;
     width: auto;
