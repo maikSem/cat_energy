@@ -41,7 +41,7 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
-    row-gap: 58px;
+    row-gap: 62px;
   }
 }
 
@@ -76,8 +76,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 84px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 160px 0 40px 0;
   }
 }
 

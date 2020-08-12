@@ -7,7 +7,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-    padding: 10px 36px 40px 36px;
+    padding: 8px 36px 40px 36px;
 
     &::after {
       position: absolute;
@@ -41,6 +41,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    height: 196px; /*Временно*/
     margin-bottom: 46px;
   }
 }
@@ -63,7 +64,7 @@
 
   @media (min-width: $tablet-width) {
     align-self: center;
-    margin-bottom: 13px;
+    margin-bottom: 14px;
 
     @include text-size(20px, 24px);
     text-align: center;

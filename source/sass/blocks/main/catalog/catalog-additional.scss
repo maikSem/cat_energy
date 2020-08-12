@@ -11,11 +11,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
-    padding-bottom: 90px; /*86*/
+    padding-bottom: 86px;
   }
 }
 
 .catalog-additional__title {
+  display: flex;
+  align-items: center;
   margin: 0;
   padding: 0 0 34px 0;
 
@@ -23,18 +25,34 @@
   @include text-size(24px, 24px);
   border-bottom: 1px solid $gray-light;
 
+  &::after {
+    display: block;
+    content: "";
+    right: 0;
+    left: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-left: 22px;
+    height: 2px;
+    background-color: $basic-green;
+  }
+
   @media (min-width: $tablet-width) {
     padding-left: 37px;
     padding-bottom: 80px;
 
     @include text-size(36px, 36px);
     border: none;
+
+    &::after {
+      margin-left: 36px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
     padding: 0;
-    margin-bottom: 81px;
+    margin-bottom: 78px;
   }
 }
 
