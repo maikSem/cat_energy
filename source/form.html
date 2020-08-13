@@ -9,8 +9,8 @@
 </head>
 
 <body class="body">
-  <header class="header container">
-    <a class="header__logo" href="index.html">
+  <header class="header">
+    <a class="header__logo container" href="index.html">
       <img class="header__logo-img" src="img/logo-mobile.svg" width="190" height="37"
         alt="Магазин функционального питания для котов «Кэт Энерджи»">
     </a>
@@ -29,12 +29,12 @@
     <h1 class="visually-hidden">В магазине Кэт энерджи, мы подберём вам самую эффективную программу по снижению или
       набору веса!</h1>
     <section class="form-order">
-      <form class="form container" action="https://echo.htmlacademy.ru" method="get">
-        <div class="form__header">
+      <form class="form" action="https://echo.htmlacademy.ru" method="get">
+        <div class="form__header container">
           <h2 class="form__title">Подбор программы</h2>
           <p class="form__text"> Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
         </div>
-        <fieldset class="form__section form__section-header">
+        <fieldset class="form__section form__section-header container">
           <ul class="form__list form__list--information">
             <li class="form__item form__item--text">
               <label class="form__caption form__caption--text" for="name">Имя:*</label>
@@ -73,8 +73,8 @@
           </ul>
         </fieldset>
         <fieldset class="form__section form__section-contact">
-          <legend class="form__legend">Контактные данные (владельца кота)</legend>
-          <ul class="form__list form__list--email">
+          <legend class="form__legend form__legend--contact">Контактные данные <br> (владельца кота)</legend>
+          <ul class="form__list form__list--email container">
             <li class="form__item form__item--email">
               <label class="form__caption form__caption--text" for="email">
                 E-mail*</label>
@@ -90,12 +90,14 @@
         </fieldset>
         <fieldset class="form__section form__section-massage">
           <legend class="form__legend">Комментарий</legend>
-          <textarea class="form__textarea" cols="30" rows="8" name="message"
-            placeholder="Расскажите обо всех повАдках кота"></textarea>
+          <div class="form__wrapper-textarea">
+            <textarea class="form__textarea" cols="30" rows="8" name="message"
+              placeholder="Расскажите обо всех повАдках кота"></textarea>
+          </div>
         </fieldset>
         <fieldset class="form__section form__section-additional">
           <legend class="form__legend form__legend--additional">Дополнительно</legend>
-          <ul class="form__list form__list--checkbox">
+          <ul class="form__list form__list--checkbox container">
             <li class="form__item form__item--checkbox">
               <label class="form__caption form__caption--checkbox">
                 <input class="form__checkbox" type="checkbox" name="sugar">
@@ -122,16 +124,18 @@
             </li>
           </ul>
         </fieldset>
-        <button class="button form__button">Отправить заявку</button>
-        <small class="form__required-areas">
-          * — Обязательные поля
-        </small>
+        <div class="form__footer">
+          <button class="button form__button">Отправить заявку</button>
+          <small class="form__required-areas">
+            * — Обязательные поля
+          </small>
+        </div>
       </form>
     </section>
   </main>
-  <section class="map map--grey container">
+  <section class="map map--grey">
     <h2 class="visually-hidden">Как нас найти?</h2>
-    <div class="map__wrapper">
+    <div class="map__wrapper container">
       <p class="map__text">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
       <p class="map__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="map__city">Санкт-Петербург</span></p>
     </div>
