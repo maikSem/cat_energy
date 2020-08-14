@@ -14,10 +14,10 @@
 .map__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 28px 0 22px 0;
+  padding: 28px 20px 22px 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 65px 0 61px 0;
+    padding: 65px 30px 61px 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -54,6 +54,7 @@
 .map__adress {
   margin: 0;
   padding: 3px;
+  padding-top: 0;
 
   @include text-size(14px, 20px);
   color: $grey-dark;
