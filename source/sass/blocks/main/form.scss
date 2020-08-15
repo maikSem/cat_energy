@@ -58,13 +58,29 @@
 }
 
 .form__section {
+  position: relative;
   margin: 0;
   padding: 0;
   border: none;
 
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: 40px;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background-color: $basic-green;
+  }
+
   @media (min-width: $tablet-width) {
     margin-left: 41px;
     margin-right: 39px;
+
+    &::after {
+      top: 20px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -187,11 +203,11 @@
 
 .form__list--email {
   margin: 0;
-  padding: 0 20px;
+  padding: 0 0 0 20px;
 
   @media (min-width: $tablet-width) {
     margin: 0 35px 0 40px;
-    padding: 0 30px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -199,7 +215,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     margin: 0;
-    padding: 0 110px;
+    padding: 0 0 0 40px;
   }
 }
 
@@ -362,56 +378,58 @@
 }
 
 .form__legend {
-  display: flex;
-  align-items: center;
-  padding: 27px 0 32px 20px;
-  width: 100%;
+  z-index: 2;
+  // display: flex;
+  // align-items: center;
+  padding: 27px 15px 32px 20px;
+  // width: 100%;
+  background-color: $basic-white;
 
   @include text-size(24px, 26px);
 
-  &::after {
-    display: block;
-    content: "";
-    right: 0;
-    left: 0;
-    flex-grow: 1;
-    flex-shrink: 0;
-    margin-top: 8px;
-    margin-left: 22px;
-    height: 2px;
-    background-color: $basic-green;
-  }
+  // &::after {
+  //   display: block;
+  //   content: "";
+  //   right: 0;
+  //   left: 0;
+  //   flex-grow: 1;
+  //   flex-shrink: 0;
+  //   margin-top: 8px;
+  //   margin-left: 22px;
+  //   height: 2px;
+  //   background-color: $basic-green;
+  // }
 
   @media (min-width: $tablet-width) {
-    padding: 0 0 78px 0;
+    padding: 0 40px 78px 40px;
 
     @include text-size(36px, 36px);
 
-    &::before {
-      display: block;
-      content: "";
-      left: 0;
-      margin-top: 8px;
-      margin-right: 39px;
-      width: 30px;
-      height: 2px;
-      background-color: $basic-green;
-    }
+    // &::before {
+    //   display: block;
+    //   content: "";
+    //   left: 0;
+    //   margin-top: 8px;
+    //   margin-right: 39px;
+    //   width: 30px;
+    //   height: 2px;
+    //   background-color: $basic-green;
+    // }
 
-    &::after {
-      margin-left: 36px;
-    }
+    // &::after {
+    //   margin-left: 36px;
+    // }
   }
 
-  @media (min-width: $desktop-width) {
-    width: 100%;
-    padding-right: 0;
+  // @media (min-width: $desktop-width) {
+  //   // width: 100%;
+  //   // padding: 0 40px 78px 40px;
 
-    &::before {
-      width: 70px;
-      margin-right: 40px;
-    }
-  }
+  //   // &::before {
+  //   //   width: 70px;
+  //   //   margin-right: 40px;
+  //   // }
+  // }
 }
 
 .form__wrapper-textarea {

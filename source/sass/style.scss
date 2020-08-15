@@ -26,10 +26,10 @@
 .body {
   display: grid;
   grid-template-rows: min-content 1fr min-content min-content;
-  min-width: 320px;
-  max-width: 1440px;
+  // min-width: 320px;
+  // max-width: 1440px;
   min-height: 100vh;
-  margin: 0 auto;
+  // margin: 0 auto;
 
   @include basic-font-normal;
 }
@@ -58,18 +58,32 @@
 }
 
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0 auto;
+  padding: 0 20px 0 0;
 
   @media (min-width: $tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 768px;
+    padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 110px;
-    padding-right: 110px;
-  }
+      width: 1440px;
+      padding-left: 70px;
+      padding-right: 110px;
+    }
+
+  // padding-left: 20px;
+  // padding-right: 20px;
+
+  // @media (min-width: $tablet-width) {
+  //   padding-left: 30px;
+  //   padding-right: 30px;
+  // }
+
+  // @media (min-width: $desktop-width) {
+  //   padding-left: 110px;
+  //   padding-right: 110px;
+  // }
 }
 
 .container--map {
