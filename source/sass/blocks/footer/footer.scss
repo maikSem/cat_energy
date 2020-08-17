@@ -1,17 +1,24 @@
-.footer__wrapper {
+.footer {
   background-color: $basic-grey;
+}
+
+.footer__wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  min-width: 320px;
+  background-color: transparent;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 55px;
-    padding-bottom: 61px;
+    padding: 55px 30px 61px 30px;
+    width: 768px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 57px;
-    padding-bottom: 58px;
+    padding: 57px 110px 58px 110px;
+    width: 1440px;
   }
 }
 

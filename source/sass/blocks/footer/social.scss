@@ -1,12 +1,16 @@
 .social__list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   margin: 0;
   padding: 0;
   width: 129px;
   height: 22px;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+  }
 }
 
 .social__item:hover path {

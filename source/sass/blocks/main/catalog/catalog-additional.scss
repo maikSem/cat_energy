@@ -1,76 +1,62 @@
 .catalog-additional__wrapper {
-  padding-top: 28px;
+  margin: 0 auto;
+  padding: 0;
+  min-width: 320px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
-    // padding-left: 37px;
-    // min-height: 1018px; /*Временно*/
+    width: 768px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding-bottom: 86px;
+    width: 1440px;
   }
 }
 
-.catalog-additional__title {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0 0 34px 20px;
-
-  @include special-font-normal;
-  @include text-size(24px, 24px);
-  border-bottom: 1px solid $gray-light;
+.catalog-additional__wrapper-title {
+  position: relative;
 
   &::after {
-    display: block;
+    position: absolute;
+    z-index: -1;
     content: "";
+    top: 43px;
     right: 0;
-    left: 0;
-    flex-grow: 1;
-    flex-shrink: 0;
-    margin-top: 8px;
-    margin-left: 22px;
+    left: 60px;
     height: 2px;
     background-color: $basic-green;
   }
 
   @media (min-width: $tablet-width) {
-    padding-left: 0;
-    padding-bottom: 80px;
+    &::after {
+      top: 20px;
+      left: 0;
+    }
+  }
+}
+
+.catalog-additional__title {
+  display: inline-block;
+  margin: 0;
+  padding: 28px 22px 34px 0;
+  background-color: $basic-white;
+
+  @include special-font-normal;
+  @include text-size(24px, 24px);
+
+  @media (min-width: $tablet-width) {
+    padding: 0 36px 80px 36px;
 
     @include text-size(36px, 36px);
     border: none;
-
-    &::before {
-      display: block;
-      content: "";
-      right: 0;
-      left: 0;
-      flex-grow: 1;
-      flex-shrink: 0;
-      margin-top: 8px;
-      margin-right: 37px;
-      height: 2px;
-      background-color: $basic-green;
-    }
-
-    &::after {
-      flex-grow: 10;
-      margin-left: 36px;
-    }
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
-    padding: 0;
+    padding: 0 35px 0 40px;
     margin-bottom: 78px;
-
-    &::after {
-      flex-grow: 13;
-    }
   }
 }
 
@@ -85,7 +71,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 4;
-    margin-right: 80px;
+    margin-right: 77px;
     padding: 0;
     padding-left: 110px;
   }
@@ -93,6 +79,10 @@
 
 .catalog-additional__item {
   border-bottom: 1px solid $border-grey;
+
+  &:first-child {
+    border-top: 1px solid $border-grey;
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;

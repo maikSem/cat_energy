@@ -6,59 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- Pixel Glass -->
-  <!-- <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("../img/pp-mobile.jpg");
-    }
-
-    /* Tablet */
-    @media (min-width: 768px) {
-      HTML {
-        /* Tablet layout */
-        background-image: url("../img/pp-tablet.jpg");
-      }
-    }
-
-    /* Desktop */
-    @media (min-width: 1440px) {
-      HTML {
-        /* Desktop layout */
-        background-image: url("../img/pp-desktop.jpg");
-      }
-    }
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script> -->
-  <!-- // Pixel Glass -->
 </head>
 
 <body class="body">
   <header class="header">
-    <a class="header__logo container">
-      <img class="header__logo-img" src="img/logo-mobile.svg" width="190" height="37"
-        alt="Магазин функционального питания для котов «Кэт Энерджи»">
-    </a>
-    <nav class="main-nav main-nav--opened ">
-      <button class="main-nav__toggle main-nav__toggle--closed" type="button">
-        </svg>
-      </button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active"><a class="main-nav__link">Главная</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="form.html">Подбор программы</a></li>
-      </ul>
-    </nav>
+    <div class="header__wrapper header__wrapper--list">
+      <a class="header__logo header__logo--index">
+        <img class="header__logo-img" src="img/logo-mobile.svg" width="190" height="37"
+          alt="Магазин функционального питания для котов «Кэт Энерджи»">
+      </a>
+      <nav class="main-nav main-nav--opened">
+        <button class="main-nav__toggle main-nav__toggle--closed" type="button">
+          </svg>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Подбор программы</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="main">
-    <section class="top container">
-      <h1 class="top__title">Функциональное <br> питание для котов</h1>
-      <p class="top__slogan">Занялся собой? Займись котом!</p>
-      <img class="top__img" src="https://via.placeholder.com/150x150" alt="">
-      <a class="button top__button" href="catalog.html">Подобрать программу</a>
+    <section class="top">
+      <div class="container">
+        <h1 class="top__title">Функциональное <br> питание для котов</h1>
+        <p class="top__slogan">Занялся собой? Займись котом!</p>
+        <img class="top__img" src="https://via.placeholder.com/150x150" alt="">
+        <a class="button top__button" href="catalog.html">Подобрать программу</a>
+      </div>
     </section>
     <section class="programs container">
       <h2 class="visually-hidden">Программа по набору и снижению веса</h2>
@@ -153,7 +129,7 @@
   </main>
   <section class="map">
     <h2 class="visually-hidden">Как нас найти?</h2>
-    <div class="map__wrapper container container--map">
+    <div class="map__wrapper">
       <p class="map__text">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
       <p class="map__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="map__city">Санкт-Петербург</span></p>
     </div>
@@ -162,7 +138,7 @@
     </div>
   </section>
   <footer class="footer">
-    <div class="footer__wrapper container">
+    <div class="footer__wrapper">
       <a class="footer__link-logo">
         <img class="footer__logo" src="./img/logo-footer.svg" width="128" height="24"
           alt="Магазин функционального питания для котов «Кэт Энерджи»">

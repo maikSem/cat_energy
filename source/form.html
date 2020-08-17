@@ -10,67 +10,69 @@
 
 <body class="body">
   <header class="header">
-    <a class="header__logo" href="index.html">
-      <img class="header__logo-img" src="img/logo-mobile.svg" width="190" height="37"
-        alt="Магазин функционального питания для котов «Кэт Энерджи»">
-    </a>
-    <nav class="main-nav main-nav--opened">
-      <button class="main-nav__toggle main-nav__toggle--closed" type="button">
-        </svg>
-      </button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">Главная</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="form.html">Подбор программы</a></li>
-      </ul>
-    </nav>
+    <div class="header__wrapper">
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-img" src="img/logo-mobile.svg" width="190" height="37"
+          alt="Магазин функционального питания для котов «Кэт Энерджи»">
+      </a>
+      <nav class="main-nav main-nav--opened">
+        <button class="main-nav__toggle main-nav__toggle--closed" type="button">
+          </svg>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Подбор программы</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="main">
     <h1 class="visually-hidden">В магазине Кэт энерджи, мы подберём вам самую эффективную программу по снижению или
       набору веса!</h1>
     <section class="form-order">
       <form class="form" action="https://echo.htmlacademy.ru" method="get">
-        <div class="form__header">
+        <div class="container">
           <h2 class="form__title">Подбор программы</h2>
           <p class="form__text"> Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
         </div>
         <fieldset class="form__section form__section-header">
-          <ul class="form__list form__list--information">
-            <li class="form__item form__item--text">
-              <label class="form__caption form__caption--text" for="name">Имя:*</label>
-              <input class="form__input form__name" type="text" name="name" id="name" placeholder="Барсик">
-            </li>
-            <li class="form__item form__item--text">
-              <label class="form__caption form__caption--text" for="mass">Вес (кг):*</label>
-              <input class="form__input form__mass" type="number" name="mass" id="mass" value="7">
-            </li>
-            <li class="form__item form__item--text">
-              <label class="form__caption form__caption--age" for="age">Возраст (лет):</label>
-              <input class="form__input form__age" type="number" name="age" id="age" value="7">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__section form__section-programs">
-          <ul class="form__list form__list--radio">
-            <li class="form__item form__item--radio">
-              <label class="form__caption form__caption--radio">
-                <input class="form__radio" type="radio" name="programs-type" value="sliming">
-                Похудение
-              </label>
-            </li>
-            <li class="form__item form__item--radio">
-              <label class="form__caption form__caption--radio">
-                <input class="form__radio" type="radio" name="programs-type" value="mass">
-                Набор массы
-              </label>
-            </li>
-            <li class="form__item form__item--radio">
-              <label class="form__caption form__caption--radio">
-                <input class="form__radio" type="radio" name="programs-type" value="do-not-know">
-                Не знаю (Нужен ваш совет)
-              </label>
-            </li>
-          </ul>
+          <div class="form__section-wrapper">
+            <ul class="form__list form__list--information">
+              <li class="form__item form__item--text">
+                <label class="form__caption form__caption--text" for="name">Имя:*</label>
+                <input class="form__input form__name" type="text" name="name" id="name" placeholder="Барсик">
+              </li>
+              <li class="form__item form__item--text">
+                <label class="form__caption form__caption--text" for="mass">Вес (кг):*</label>
+                <input class="form__input form__mass" type="number" name="mass" id="mass" value="7">
+              </li>
+              <li class="form__item form__item--text">
+                <label class="form__caption form__caption--age" for="age">Возраст (лет):</label>
+                <input class="form__input form__age" type="number" name="age" id="age" value="7">
+              </li>
+            </ul>
+            <ul class="form__list form__list--radio">
+              <li class="form__item form__item--radio">
+                <label class="form__caption form__caption--radio">
+                  <input class="form__radio" type="radio" name="programs-type" value="sliming">
+                  Похудение
+                </label>
+              </li>
+              <li class="form__item form__item--radio">
+                <label class="form__caption form__caption--radio">
+                  <input class="form__radio" type="radio" name="programs-type" value="mass">
+                  Набор массы
+                </label>
+              </li>
+              <li class="form__item form__item--radio">
+                <label class="form__caption form__caption--radio">
+                  <input class="form__radio" type="radio" name="programs-type" value="do-not-know">
+                  Не знаю (Нужен ваш совет)
+                </label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
         <fieldset class="form__section form__section-contact">
           <div class="container">
@@ -92,42 +94,46 @@
           </div>
         </fieldset>
         <fieldset class="form__section form__section-massage">
-          <legend class="form__legend form__legend--coment">Комментарий</legend>
-          <div class="form__wrapper-textarea">
-            <textarea class="form__textarea" cols="30" rows="8" name="message"
-              placeholder="Расскажите обо всех повАдках кота"></textarea>
+          <div class="container">
+            <legend class="form__legend form__legend--coment">Комментарий</legend>
+            <div class="form__wrapper-textarea">
+              <textarea class="form__textarea" cols="30" rows="8" name="message"
+                placeholder="Расскажите обо всех повАдках кота"></textarea>
+            </div>
           </div>
         </fieldset>
         <fieldset class="form__section form__section-additional">
-          <legend class="form__legend form__legend--additional">Дополнительно</legend>
-          <ul class="form__list form__list--checkbox">
-            <li class="form__item form__item--checkbox">
-              <label class="form__caption form__caption--checkbox">
-                <input class="form__checkbox" type="checkbox" name="sugar">
-                Cахарозаменитель
-              </label>
-            </li>
-            <li class="form__item form__item--checkbox">
-              <label class="form__caption form__caption--checkbox">
-                <input class="form__checkbox" type="checkbox" name="water">
-                Питьевая вода
-              </label>
-            </li>
-            <li class="form__item form__item--checkbox">
-              <label class="form__caption form__caption--checkbox">
-                <input class="form__checkbox" type="checkbox" name="milk">
-                Молоко
-              </label>
-            </li>
-            <li class="form__item form__item--checkbox">
-              <label class="form__caption form__caption--checkbox">
-                <input class="form__checkbox" type="checkbox" name="vitamins">
-                Витамины
-              </label>
-            </li>
-          </ul>
+          <div class="container">
+            <legend class="form__legend form__legend--additional">Дополнительно</legend>
+            <ul class="form__list form__list--checkbox">
+              <li class="form__item form__item--checkbox">
+                <label class="form__caption form__caption--checkbox">
+                  <input class="form__checkbox" type="checkbox" name="sugar">
+                  Cахарозаменитель
+                </label>
+              </li>
+              <li class="form__item form__item--checkbox">
+                <label class="form__caption form__caption--checkbox">
+                  <input class="form__checkbox" type="checkbox" name="water">
+                  Питьевая вода
+                </label>
+              </li>
+              <li class="form__item form__item--checkbox">
+                <label class="form__caption form__caption--checkbox">
+                  <input class="form__checkbox" type="checkbox" name="milk">
+                  Молоко
+                </label>
+              </li>
+              <li class="form__item form__item--checkbox">
+                <label class="form__caption form__caption--checkbox">
+                  <input class="form__checkbox" type="checkbox" name="vitamins">
+                  Витамины
+                </label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
-        <div class="form__footer">
+        <div class="form__footer container">
           <button class="button form__button">Отправить заявку</button>
           <small class="form__required-areas">
             * — Обязательные поля

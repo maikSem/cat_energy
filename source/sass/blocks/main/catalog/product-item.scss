@@ -42,7 +42,7 @@
 
   @media (min-width: $desktop-width) {
     height: 196px; /*Временно*/
-    margin-bottom: 46px;
+    margin-bottom: 49px;
   }
 }
 
@@ -79,7 +79,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 23px; /*22px*/
+    margin-bottom: 20px; /*22px*/
 
     @include text-size(20px, 21px);
     border-collapse: unset;
