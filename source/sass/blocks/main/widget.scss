@@ -1,13 +1,30 @@
 .widget {
-  min-height: 703px; /*Временно*/
-  background: $special-grey-dark;
+  min-height: 705px; /*Временно*/
+  background-color: $special-grey-dark;
 
   @media (min-width: $tablet-width) {
-    min-height: 1082px; /*Временно*/
+    position: relative;
+    min-height: 1080px; /*Временно*/
+    background-color: $basic-white;
+
+    &::after {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 42.75%;
+      background-color: $special-grey-dark;
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-height: 656px; /*Временно*/
+
+    &::after {
+      height: 70.5%;
+    }
   }
 }
 
@@ -20,11 +37,16 @@
 
 .widget__header {
   @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: $basic-white;
   }
 
   @media (min-width: $desktop-width) {
-    background: $special-grey-dark;
+    display: block;
+    z-index: 2;
+    padding-left: 40px;
+    background-color: transparent;
   }
 }
 
@@ -35,8 +57,16 @@
   @include special-font-normal;
   @include text-size(36px, 40px);
 
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    padding: 43px 20px 63px 0;
+
+    @include text-size(60px, 60px);
+  }
+
   @media (min-width: $desktop-width) {
-    background: $basic-white;
+    padding: 58px 0 146px 0;
+    background-color: transparent;
   }
 }
 
@@ -47,6 +77,23 @@
   @include text-size(14px, 18px);
   text-align: left;
   color: $grey-dark;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    margin-bottom: 54px;
+    padding-right: 10px;
+
+    @include text-size(16px, 24px);
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 69px;
+    padding-right: 155px;
+  }
 }
 
 .widget__list {
@@ -54,16 +101,37 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   margin: 0;
-  margin-bottom: 17px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    column-gap: 0;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .widget__item {
+  position: relative;
   display: flex;
   flex-direction: column;
+  border: 1px solid $gray-light;
+  border-radius: 5px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 160px;
+
+    &:not(:first-child) {
+      margin-left: 44px;
+    }
+  }
 }
 
 .widget__value {
-  padding: 15px 0 11px 0;
+  padding: 14px 0 15px 0;
 
   @include special-font-normal;
   @include text-size(24px, 24px);
@@ -71,14 +139,43 @@
     align: center;
     transform: uppercase;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 20px;
+
+    @include text-size(30px, 37px);
+  }
 }
 
 .widget__key {
-  margin: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -19px;
+  margin: 0 auto;
+  padding: 0 7px;
+  width: 100px;
 
   @include text-size(12px, 12px);
   text-align: center;
   color: $grey-dark;
+  background-color: $special-grey-dark;
+
+  @media (min-width: $tablet-width) {
+    bottom: -5px;
+    width: 145px;
+
+    @include text-size(14px, 14px);
+    background-color: $basic-white;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $special-grey-dark;
+  }
 }
 
 .widget__slogan {
@@ -90,9 +187,47 @@
     align: center;
     transform: uppercase;
   }
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 11px;
+
+    @include text-size(20px, 20px);
+    text-align: right;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    text-align: left;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.widget__price {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    margin: 0;
+    margin-left: 60px;
+  }
 }
 
 .widget__cats {
+  display: none;
   background: $special-grey-dark;
 }
 

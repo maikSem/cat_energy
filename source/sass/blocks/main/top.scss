@@ -17,8 +17,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 62px;
-    min-height: 874px;  /*Временно*/
+    padding-top: 60px;
+    min-height: 870px;  /*Временно*/
     background-color: $basic-white;
 
     &::after {
@@ -27,11 +27,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 110px;
+    padding-top: 112px;
     min-height: 583px;  /*Временно*/
 
     &::after {
-      top: -102px;
+      top: -112px;
       left: 50%;
       bottom: 0;
       z-index: 1;
@@ -42,8 +42,7 @@
 }
 
 .top__title {
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 0 0 25px 0;
 
   @include special-font-normal;
   @include h1;
@@ -59,7 +58,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 40px 81px;
+    margin: 0 0 40px 121px;
   }
 }
 
@@ -75,8 +74,7 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 49px;
-    padding: 0 0 0 87px;
+    margin: 0 0 49px 87px;
 
     @include text-size(20px, 20px);
     text-align: left;
@@ -84,8 +82,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 52px;
-    padding: 0 0 0 81px;
+    margin: 0 0 52px 121px;
   }
 }
 
@@ -102,19 +99,18 @@
 
 .top__button {
   background-color: $basic-green;
-  margin-top: 120px;  /*Временно*/
+  margin-top: 122px;  /*Временно*/
 
   @media (min-width: $tablet-width) {
     margin-top: 0; /*Временно*/
     margin-left: 83px;
-    padding: 14px 0;
+    padding: 15px 0;
     width: 244px;
-    height: 54px;
 
-    @include text-size(20px, 20px);
+    @include text-size(20px, 22px);
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 81px;
+    margin-left: 121px;
   }
 }

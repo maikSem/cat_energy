@@ -1,6 +1,7 @@
-.header {
-  position: relative;
+.header__wrapper {
+  margin: 0 auto;
   padding-top: 12px;
+  min-width: 320px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -8,25 +9,48 @@
     flex-wrap: wrap;
     align-items: center;
     padding-top: 30px;  /*Пока 30пх, когда вставлю лого-планшета, поменяю на 24пх*/
+    width: 768px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 60px; /*Пока 56пх, когда вставлю лого-планшета, поменяю на 53пх*/
+    padding-bottom: 5px;
+    width: 1440px;
+  }
+}
+
+.header__wrapper--list {
+  @media (min-width: $tablet-width) {
+    padding-top: 27px;  /*Временно, пока не научусь встявлять адаптивные картинки))*/
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 53px; /*Пока 56пх, когда вставлю лого-планшета, поменяю на 53пх*/
   }
 }
 
 .header__logo {
   display: block;
   margin: 0;
+  padding-left: 20px;
   padding-bottom: 15px;
   border-bottom: 1px solid $border-grey;
 
   @media (min-width: $tablet-width) {
+    padding-left: 30px;
     padding-bottom: 0;
     border: none;
 
     src: url("img/logo-tablet.svg");
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 110px;
+  }
+}
+
+.header__logo--index {
+  height: 54px; /*временно для главной страницы*/
 }
 
 .header__logo-img {

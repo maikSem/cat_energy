@@ -3,11 +3,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 12px;
-  padding: 19px 0 25px 0;
+  padding: 19px 20px 24px 20px;
 
   @media (min-width: $tablet-width) {
     display: block;
-    padding: 10px 36px 40px 36px;
+    padding: 8px 36px 40px 36px;
 
     &::after {
       position: absolute;
@@ -41,7 +41,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 46px;
+    height: 196px; /*Временно*/
+    margin-bottom: 49px;
   }
 }
 
@@ -63,7 +64,7 @@
 
   @media (min-width: $tablet-width) {
     align-self: center;
-    margin-bottom: 13px;
+    margin-bottom: 14px;
 
     @include text-size(20px, 24px);
     text-align: center;
@@ -78,7 +79,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 22px;
+    margin-bottom: 20px; /*22px*/
 
     @include text-size(20px, 21px);
     border-collapse: unset;
@@ -110,7 +111,6 @@
 
 .product-item__line {
   display: flex;
-  margin-bottom: -2px;
 
   @media (min-width: $tablet-width) {
     align-items: center;
@@ -131,14 +131,12 @@
 .product-item__button {
   grid-column: 1 / -1;
   grid-row: 3 / 4;
-
+  padding-top: 12px;
   font-size: 16px;
-  // @media (min-width: $tablet-width) {
-  //   @include text-size(16px, 20px);
-  // }
 
-  // @media (min-width: $desktop-width) {
-  //   margin-left: 10px;
-  //   margin-right: 15px;
-  // }
+  @media (min-width: $desktop-width) {
+    padding: 10px 0;
+
+    @include text-size(16px, 20px);
+  }
 }

@@ -1,29 +1,53 @@
 .catalog-additional__wrapper {
-  padding-top: 28px;
+  margin: 0 auto;
+  padding: 0;
+  min-width: 320px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
-    // padding-left: 37px;
-    min-height: 1018px; /*Временно*/
+    width: 768px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    min-height: 492px; /*Временно*/
+    padding-bottom: 86px;
+    width: 1440px;
+  }
+}
+
+.catalog-additional__wrapper-title {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: 43px;
+    right: 0;
+    left: 60px;
+    height: 2px;
+    background-color: $basic-green;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      top: 20px;
+      left: 0;
+    }
   }
 }
 
 .catalog-additional__title {
+  display: inline-block;
   margin: 0;
-  padding: 0 0 34px 0;
+  padding: 28px 22px 34px 0;
+  background-color: $basic-white;
 
   @include special-font-normal;
   @include text-size(24px, 24px);
-  border-bottom: 1px solid $gray-light;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 80px;
+    padding: 0 36px 80px 36px;
 
     @include text-size(36px, 36px);
     border: none;
@@ -31,26 +55,40 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
+    padding: 0 35px 0 40px;
+    margin-bottom: 78px;
   }
 }
 
 .catalog-additional__list {
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 4;
+    margin-right: 77px;
+    padding: 0;
+    padding-left: 110px;
   }
 }
 
 .catalog-additional__item {
   border-bottom: 1px solid $border-grey;
 
+  &:first-child {
+    border-top: 1px solid $border-grey;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;  /*Временно*/
     border: 1px solid $border-grey;
+    padding-right: 0;
   }
 }
 
@@ -59,21 +97,20 @@
 }
 
 .catalog-additional__bounty {
-  margin-top: 39px;
-  margin-bottom: 35px;
+  margin: 39px 20px 35px 20px;
   min-height: 289px;
   background: url("../img/gift-photo-mobile@1x.jpg") 0 0 no-repeat;
   background-size: cover;
 
   @media (min-width: $tablet-width) {
-    margin-top: 69px;
-    margin-bottom: 76px;
+    margin: 69px 30px 76px 30px;
     min-height: 200px; /*Временно*/
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 4 / 5;
     margin: 0;
+    margin-right: 110px;
   }
 }
 
@@ -87,7 +124,15 @@
     align: center;
   }
 
+  @media (min-width: $tablet-width) {
+    float: right;
+    padding: 71px 124px 69px 0;
+    text-align: left;
+  }
+
   @media (min-width: $desktop-width) {
-    padding-top: 184px;
+    float: none;
+    padding: 184px 0 42px 0;
+    text-align: center;
   }
 }

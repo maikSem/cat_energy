@@ -55,6 +55,11 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 110px;
   }
 }
 
@@ -94,7 +99,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 12px 0;
+    padding: 11px 0;
 
     @include special-font-normal;
     @include text-size(18px, 24px);
@@ -102,6 +107,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 12px 0 7px 0;
     color: $basic-black; /*Временно*/
 
     @include text-size(20px, 30px);
@@ -118,12 +124,6 @@
       left: 0;
       height: 2px;
       background-color: $basic-green;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    &::after {
-      background-color: $basic-white;
     }
   }
 }
