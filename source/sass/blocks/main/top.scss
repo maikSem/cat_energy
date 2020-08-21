@@ -14,12 +14,15 @@
     height: 305px;
     background: url("../img/index-background-mobile@1x.jpg") no-repeat;
     background-size: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
   }
 
   @media (min-width: $tablet-width) {
     padding-top: 60px;
     min-height: 870px;  /*Временно*/
-    background-color: $basic-white;
 
     &::after {
       display: none;
@@ -27,18 +30,27 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 112px;
-    min-height: 583px;  /*Временно*/
+    padding-top: 108px;
+    min-height: 578px;  /*Временно*/
 
     &::after {
-      top: -112px;
+      top: -115px;
       left: 50%;
       bottom: 0;
       z-index: 1;
       display: block;
       height: auto;
+      background: url("../img/index-background-desktop@1x.jpg") no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
+}
+
+.top__wrapper {
+  position: relative;
 }
 
 .top__title {
@@ -94,14 +106,21 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     z-index: -1;
+    top: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: 2;
+    left: 560px;
+    top: -85px;
   }
 }
 
 .top__button {
   background-color: $basic-green;
-  margin-top: 122px;  /*Временно*/
 
   @media (min-width: $tablet-width) {
+    z-index: 2;
     margin-top: 0; /*Временно*/
     margin-left: 83px;
     padding: 15px 0;

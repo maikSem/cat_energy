@@ -56,9 +56,11 @@
     display: flex;
     justify-content: space-between;
     padding-right: 30px;
+    margin-top: 3px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: -7px;
     padding-right: 110px;
   }
 }
@@ -108,9 +110,14 @@
 
   @media (min-width: $desktop-width) {
     padding: 12px 0 7px 0;
-    color: $basic-black; /*Временно*/
 
     @include text-size(20px, 30px);
+  }
+}
+
+.main-nav__link--index {
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
   }
 }
 

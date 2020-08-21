@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 80px 0 71px 40px;
+    padding: 82px 0 71px 40px;
   }
 }
 
@@ -49,6 +49,7 @@
 }
 
 .programs__title {
+  position: relative;
   margin: 0;
   padding: 0 0 29px 10px;
 
@@ -59,40 +60,115 @@
     transform: uppercase;
   }
 
+  &::before {
+    position: absolute;
+    top: -7px;
+    left: 2px;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: $basic-green;
+    border-radius: 50%;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0 20px 25px 0;
 
     @include text-size(36px, 36px);
     text-align: left;
+
+    &::before {
+      top: 15px;
+      left: 392px;
+      width: 200px;
+      height: 200px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 20px 73px 0;
     text-align: center;
+
+    &::before {
+      top: -29px;
+      left: 0;
+      width: 100px;
+      height: 100px;
+    }
   }
 }
 
 .programs__title--slim {
+  &::after {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 10px;
+    width: 36px;
+    height: 50px;
+    background: url("../img/icon-cat-slim.svg") no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      top: 5px;
+      left: 424px;
+      width: 140px;
+      height: 192px;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     padding-left: 39px;
+
+    &::after {
+      top: -36px;
+      left: 15px;
+      width: 70px;
+      height: 97px;
+    }
   }
 }
 
 .programs__title--mass {
   padding-left: 42px;
 
+  &::after {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: -7px;
+    width: 67px;
+    height: 28px;
+    background: url("../img/icon-cat-pro.svg") no-repeat;
+  }
+
   @media (min-width: $tablet-width) {
     padding-left: 0;
+
+    &::after {
+      top: 59px;
+      left: 360px;
+      width: 268px;
+      height: 112px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 80px;
+
+    &::after {
+      top: -9px;
+      left: -20px;
+      width: 134px;
+      height: 56px;
+    }
   }
 }
 
 .programs__text {
   margin: 0 0 19px 0;
-  padding: 0 13px 23px 0;
+  padding: 0 13px 21px 0;
 
   @include text-size(14px, 18px);
   color: $grey-dark;
@@ -100,7 +176,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding: 0 0 54px 0;
+    padding: 0 0 52px 0;
     width: 63%;
 
     @include text-size(16px, 24px);
@@ -125,6 +201,7 @@
 }
 
 .programs__link {
+  position: relative;
   display: block;
   margin: 0 20px 22px 0;
 
@@ -136,10 +213,25 @@
   }
   color: $basic-black;
 
+  &::after {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 102px;
+    width: 32px;
+    height: 10px;
+    background: url("../img/icon-right-arrow-long.svg") no-repeat;
+  }
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 55px;
 
     @include text-size(20px, 30px);
+
+    &::after {
+      top: 9px;
+      left: 133px;
+    }
   }
 
   @media (min-width: $desktop-width) {
