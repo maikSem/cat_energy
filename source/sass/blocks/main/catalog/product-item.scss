@@ -7,7 +7,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-    padding: 8px 36px 40px 36px;
+    padding: 8px 37px 40px 37px;
 
     &::after {
       position: absolute;
@@ -27,11 +27,13 @@
 }
 
 .product-item__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-column: 1 / 2;
   grid-row: 1 / 3;
   width: 140px; /*Временно*/
   height: 112px; /*Временно*/
-  background-color: red;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 34px;
@@ -46,10 +48,26 @@
   }
 }
 
+// .product-item__wrapper--chicken-big {
+//   padding-top: 10px;
+// }
+
+// .product-item__wrapper--fish-smal {
+//   padding-top: 10px;
+// }
+
+// .product-item__wrapper--fish-big {
+//   padding-top: 8px;
+// }
+// .product-item__img {
+//   max-width: 100%;
+// }
+
 .product-item__title {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   margin: 0;
+  margin-top: 2px;
 
   @include special-font-normal;
   @include text-size(16px, 20px);

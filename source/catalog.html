@@ -10,10 +10,14 @@
 
 <body class="body">
   <header class="header">
-    <div class="header__wrapper">
-      <a class="header__logo" href="index.html">
-        <img class="header__logo-img" src="img/logo-mobile.svg" width="190" height="37"
-          alt="Магазин функционального питания для котов «Кэт Энерджи»">
+    <div class="header__wrapper header__wrapper--list">
+      <a class="header__logo header__logo--index" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="header__logo-img" src="img/logo-mobile.svg" width="190" height="37"
+            alt="Магазин функционального питания для котов «Кэт Энерджи»">
+        </picture>
       </a>
       <nav class="main-nav main-nav--opened">
         <button class="main-nav__toggle main-nav__toggle--closed" type="button">
@@ -34,8 +38,14 @@
         <ul class="catalog__list">
           <li class="catalog__item product-item">
             <div class="product-item__wrapper">
-              <!-- <img class="product-item__img" src="https://via.placeholder.com/150x150"
-                width="" height="" alt=""> -->
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
+                <img class="product-item__img" src="img/chicken-small-mobile@1x.jpg"
+                  srcset="img/chicken-small-mobile@2x.jpg 2x" alt="Маленький стакан Кэт Энерджи с курицей">
+              </picture>
             </div>
             <h2 class="product-item__title">Cat Energy <br> PRO <br> 500 г</h2>
             <dl class="product-item__features">
@@ -55,9 +65,15 @@
             <a class="button product-item__button" href="#">Заказать</a>
           </li>
           <li class="catalog__item product-item">
-            <div class="product-item__wrapper">
-              <!-- <img class="product-item__img" src="https://via.placeholder.com/150x150"
-                width="" height="" alt=""> -->
+            <div class="product-item__wrapper product-item__wrapper--chicken-big">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
+                <img class="product-item__img" src="img/chicken-big-mobile@1x.jpg"
+                  srcset="img/chicken-big-mobile@2x.jpg 2x" alt="Большой стакан Кэт Энерджи с курицей">
+              </picture>
             </div>
             <h2 class="product-item__title">Cat Energy <br> PRO <br> 1000 г</h2>
             <dl class="product-item__features">
@@ -77,9 +93,15 @@
             <a class="button product-item__button" href="#">Заказать</a>
           </li>
           <li class="catalog__item product-item">
-            <div class="product-item__wrapper">
-              <!-- <img class="product-item__img" src="https://via.placeholder.com/150x150"
-                width="" height="" alt=""> -->
+            <div class="product-item__wrapper product-item__wrapper--fish-smal">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
+                <img class="product-item__img" src="img/fish-small-mobile@1x.jpg"
+                  srcset="img/fish-small-mobile@2x.jpg 2x" alt="Маленький стакан Кэт Энерджи с рыбой">
+              </picture>
             </div>
             <h2 class="product-item__title">Cat Energy <br> PRO <br> 500 г</h2>
             <dl class="product-item__features">
@@ -99,9 +121,15 @@
             <a class="button product-item__button" href="#">Заказать</a>
           </li>
           <li class="catalog__item product-item">
-            <div class="product-item__wrapper">
-              <!-- <img class="product-item__img" src="https://via.placeholder.com/150x150"
-                width="" height="" alt=""> -->
+            <div class="product-item__wrapper product-item__wrapper--fish-big">
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
+                <img class="product-item__img" src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x"
+                  alt="Большой стакан Кэт Энерджи с гречкой">
+              </picture>
             </div>
             <h2 class="product-item__title">Cat Energy <br> PRO <br> 1000 г</h2>
             <dl class="product-item__features">
@@ -122,8 +150,14 @@
           </li>
           <li class="catalog__item product-item">
             <div class="product-item__wrapper">
-              <!-- <img class="product-item__img" src="https://via.placeholder.com/150x150"
-                width="" height="" alt=""> -->
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
+                <img class="product-item__img" src="img/buckwheat-small-mobile@1x.jpg"
+                  srcset="img/buckwheat-small-mobile@2x.jpg 2x" alt="Маленький стакан Кэт Энерджи с гречкой">
+              </picture>
             </div>
             <h2 class="product-item__title">Cat Energy <br> slim <br> 500 г</h2>
             <dl class="product-item__features">
@@ -144,8 +178,14 @@
           </li>
           <li class="catalog__item product-item">
             <div class="product-item__wrapper">
-              <!-- <img class="product-item__img" src="https://via.placeholder.com/150x150"
-                width="" height="" alt=""> -->
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
+                <img class="product-item__img" src="img/buckwheat-big-mobile@1x.jpg"
+                  srcset="img/buckwheat-big-mobile@2x.jpg 2x" alt="Большой стакан Кэт Энерджи с гречкой">
+              </picture>
             </div>
             <h2 class="product-item__title">Cat Energy <br> slim <br> 1000 г</h2>
             <dl class="product-item__features">
@@ -166,8 +206,14 @@
           </li>
           <li class="catalog__item product-item">
             <div class="product-item__wrapper">
-              <!-- <img class="product-item__img" src="https://via.placeholder.com/150x150"
-                width="" height="" alt=""> -->
+              <picture>
+                <source media="(min-width: 1440px)"
+                  srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
+                <img class="product-item__img" src="img/rice-small-mobile@1x.jpg"
+                  srcset="img/rice-small-mobile@2x.jpg 2x" alt="Маленький стакан Кэт Энерджи с рисом">
+              </picture>
             </div>
             <h2 class="product-item__title">Cat Energy <br> slim <br> 500 г</h2>
             <dl class="product-item__features">
