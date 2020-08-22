@@ -8,12 +8,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 30px;  /*Пока 30пх, когда вставлю лого-планшета, поменяю на 24пх*/
+    padding-top: 30px;
     width: 768px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 60px; /*Пока 56пх, когда вставлю лого-планшета, поменяю на 53пх*/
+    padding-top: 60px;
     width: 1440px;
   }
 }
@@ -24,7 +24,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 53px; /*Пока 56пх, когда вставлю лого-планшета, поменяю на 53пх*/
+    padding-top: 53px;
   }
 }
 
