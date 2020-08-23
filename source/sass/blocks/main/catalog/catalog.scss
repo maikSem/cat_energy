@@ -84,6 +84,7 @@
 }
 
 .catalog__all-text {
+  position: relative;
   margin: 0 0 8px 0;
 
   @include special-font-normal;
