@@ -8,24 +8,23 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 30px;  /*Пока 30пх, когда вставлю лого-планшета, поменяю на 24пх*/
+    padding-top: 30px;
     width: 768px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 60px; /*Пока 56пх, когда вставлю лого-планшета, поменяю на 53пх*/
-    padding-bottom: 5px;
+    padding-top: 60px;
     width: 1440px;
   }
 }
 
 .header__wrapper--list {
   @media (min-width: $tablet-width) {
-    padding-top: 27px;  /*Временно, пока не научусь встявлять адаптивные картинки))*/
+    padding-top: 24px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 53px; /*Пока 56пх, когда вставлю лого-планшета, поменяю на 53пх*/
+    padding-top: 53px;
   }
 }
 
@@ -33,15 +32,13 @@
   display: block;
   margin: 0;
   padding-left: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
   border-bottom: 1px solid $border-grey;
 
   @media (min-width: $tablet-width) {
     padding-left: 30px;
     padding-bottom: 0;
     border: none;
-
-    src: url("img/logo-tablet.svg");
   }
 
   @media (min-width: $desktop-width) {
@@ -49,12 +46,16 @@
   }
 }
 
-.header__logo--index {
-  height: 54px; /*временно для главной страницы*/
-}
+.header__logo--index img {
+  height: 37px;
 
-.header__logo-img {
   @media (min-width: $tablet-width) {
-    src: url("img/logo-tablet.svg");
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
   }
 }

@@ -4,7 +4,7 @@
   min-width: 320px;
 
   @media (min-width: $tablet-width) {
-    padding: 65px 30px 68px 30px;
+    padding: 60px 30px 68px 30px;
     width: 768px;
   }
 
@@ -84,6 +84,7 @@
 }
 
 .catalog__all-text {
+  position: relative;
   margin: 0 0 8px 0;
 
   @include special-font-normal;

@@ -7,7 +7,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-    padding: 8px 36px 40px 36px;
+    padding: 8px 37px 40px 37px;
 
     &::after {
       position: absolute;
@@ -27,22 +27,25 @@
 }
 
 .product-item__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-column: 1 / 2;
   grid-row: 1 / 3;
   width: 140px; /*Временно*/
   height: 112px; /*Временно*/
-  background-color: red;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 34px;
+    align-items: flex-end;
+    margin-bottom: 26px;
     margin-left: auto;
     margin-right: auto;
-    height: 200px; /*Временно*/
+    height: 208px; /*Временно*/
   }
 
   @media (min-width: $desktop-width) {
-    height: 196px; /*Временно*/
-    margin-bottom: 49px;
+    height: 208px; /*Временно*/
+    margin-bottom: 36px;
   }
 }
 
@@ -50,13 +53,13 @@
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   margin: 0;
+  margin-top: 2px;
 
   @include special-font-normal;
   @include text-size(16px, 20px);
   text: {
     transform: uppercase;
   }
-  color: $grey-dark-hight;
 
   br:nth-child(2) {
     display: none;
@@ -84,6 +87,11 @@
     @include text-size(20px, 21px);
     border-collapse: unset;
   }
+}
+
+.product-item__link--title {
+  color: $grey-dark-hight;
+  text-decoration: none;
 }
 
 .product-item__features {
