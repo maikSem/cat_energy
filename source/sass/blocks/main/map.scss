@@ -1,6 +1,5 @@
 .map {
   position: relative;
-  min-height: 362px;
 
   @media (min-width: $tablet-width) {
     min-height: 601px;  /*Временно*/
@@ -30,6 +29,14 @@
     padding: 62px 89px 59px 76px;
     width: auto;
     background-color: $basic-white;
+  }
+}
+
+.map__wrapper-img {
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
   }
 }
 
@@ -85,21 +92,10 @@
   }
 }
 
-.map__wrapper-img {
-  height: 362px;
-  background: url("../img/bg-map-mobile@1x.png") 0 0 no-repeat;
-  background-size: cover;
-
-  @media (min-width: $tablet-width) {
-    height: 400px;
-    background: url("../img/bg-map-tablet@1x.png") 0 0 no-repeat;
-    background-size: cover;
-  }
-
-  @media (min-width: $desktop-width) {
-    background: url("../img/bg-map-desktop@1x.png") 0 0 no-repeat;
-    background-size: cover;
-  }
+.map__img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .map--grey {
