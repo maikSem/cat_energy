@@ -43,6 +43,7 @@
 
 .additional-product__features {
   display: flex;
+  margin: 0;
   padding-bottom: 15px;
 
   @include text-size(14px, 14px);
@@ -59,9 +60,9 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
-    margin-right: 40px;
+    margin-right: 36px;
     padding-top: 7px;
-    width: 286px;
+    width: 290px;
   }
 }
 
@@ -74,6 +75,8 @@
 
   @media (min-width: $desktop-width) {
     margin-left: auto;
+    width: 50px;
+    text-align: left;
   }
 }
 
