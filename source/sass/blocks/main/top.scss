@@ -33,6 +33,17 @@
     padding-top: 108px;
     min-height: 578px;  /*Временно*/
 
+    &::before {
+      position: absolute;
+      content: "";
+      top: -115px;
+      right: 50%;
+      left: 0;
+      z-index: -1;
+      height: 693px;
+      background-color: $basic-white;
+    }
+
     &::after {
       top: -115px;
       left: 50%;
@@ -41,6 +52,8 @@
       display: block;
       height: auto;
       background: url("../img/index-background-desktop@1x.jpg") no-repeat;
+      background-color: $basic-green;
+      background-size: 80% 705px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");
