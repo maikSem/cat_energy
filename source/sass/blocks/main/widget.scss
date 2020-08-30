@@ -286,7 +286,10 @@
   }
 }
 
-.widget__toggle-scale {
+.widget__scale {
+  position: relative;
+  display: flex;
+  align-items: center;
   flex-grow: 1;
   margin: 0 14px 0 18px;
   height: 14px;
@@ -295,6 +298,7 @@
   border-radius: 6px;
 
   @media (min-width: $tablet-width) {
+    display: block;
     margin: 0 20px;
     height: 6px;
     background-color: $scale;
@@ -302,8 +306,32 @@
   }
 }
 
-.widget__toggle-was,
-.widget__toggle-get {
+.widget__scale-toggle {
+  display: block;
+  width: 40%;
+  height: 6px;
+  background-color: $basic-green;
+  border-radius: 6px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: -15px;
+    left: 75px;
+  }
+}
+
+.widget__scale-toggle--before {
+  margin-left: 5px;
+  margin-right: 5px;
+
+  @media (min-width: $tablet-width) {
+   margin: 0;
+  }
+}
+
+.widget__title-was,
+.widget__title-get {
   @include special-font-normal;
   @include text-size(16px, 20px);
   text: {
