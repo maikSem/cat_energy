@@ -13,17 +13,17 @@
   }
 }
 
-.social__item:hover path {
+.social__svg {
+  fill: $gray-middle;
+}
+
+.social__item:hover .social__svg {
   fill: $basic-green;
 }
 
-.social__item:active path {
+.social__item:active .social__svg {
   fill: $basic-green;
   opacity: 0.3;
-}
-
-.social__svg path {
-  fill: $gray-middle;
 }
 
 .social__svg--vk {

@@ -42,6 +42,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    z-index: 2;
     padding-left: 110px;
   }
 }
