@@ -160,7 +160,21 @@
 }
 
 .form__caption--radio {
+  position: relative;
   color: $grey-dark-hight;
+  cursor: pointer;
+}
+
+.form__radio:checked + .form__radio-svg {
+  circle:last-child {
+    display: block;
+  }
+}
+
+.form__radio:hover:not(:disabled) + .form__radio-svg {
+  circle:first-child {
+    stroke: $radio-hover;
+  }
 }
 
 .form__list {
@@ -230,13 +244,19 @@
   }
 }
 
-.form__radio {
-  display: none;
+.form__radio-svg {
+  position: absolute;
+  top: -7px;
+  left: -45px;
+
+  circle:last-child {
+    display: none;
+  }
 }
 
-.form__checkbox {
-  display: none;
-}
+// .form__checkbox {
+//   display: none;
+// }
 
 .form__input {
   flex-grow: 1;
@@ -250,6 +270,14 @@
     text: {
       transform: uppercase;
     }
+  }
+
+  &:hover {
+    border-color: $gray-light;
+  }
+
+  &:focus {
+    border-color: $grey-dark;
   }
 
   @media (min-width: $tablet-width) {
