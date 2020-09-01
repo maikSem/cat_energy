@@ -23,7 +23,7 @@
 
   @media (min-width: $desktop-width) {
     padding-left: 40px;
-    margin-top: 74px;
+    margin-top: 72px;
   }
 }
 
@@ -160,21 +160,96 @@
 }
 
 .form__caption--radio {
-  position: relative;
   color: $grey-dark-hight;
   cursor: pointer;
 }
 
-.form__radio:checked + .form__radio-svg {
-  circle:last-child {
-    display: block;
+.form__radio {
+  position: relative;
+}
+
+.form__caption--radio::before {
+  position: absolute;
+  content: "";
+  top: -7px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: url("../img/radiobutton.svg") 0 0 no-repeat;
+  background-size: 100%;
+
+  @media (min-width: $tablet-width) {
+    left: -60px;
+    width: 40px;
+    height: 40px;
   }
 }
 
-.form__radio:hover:not(:disabled) + .form__radio-svg {
-  circle:first-child {
-    stroke: $radio-hover;
+.form__radio:hover:not(:disabled) + .form__caption--radio::before {
+  background-image: url("../img/radiobutton_hover.svg");
+}
+
+.form__radio:checked + .form__caption--radio::before {
+  background-image: url("../img/radiobutton_active.svg");
+}
+
+.form__radio:checked:hover:not(:disabled) + .form__caption--radio::before {
+  background-image: url("../img/radiobutton_active-hover.svg");
+}
+
+.form__radio:disabled + .form__caption--radio,
+.form__radio:checked:disabled + .form__caption--radio {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.form__checkbox {
+  position: relative;
+}
+
+.form__caption--checkbox {
+  cursor: pointer;
+}
+
+.form__caption--checkbox::before {
+  position: absolute;
+  left: 0;
+  top: -5px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url("../img/checkbox.svg") 0 0 no-repeat;
+  background-size: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
   }
+}
+
+.form__checkbox:hover:not(:disabled) + .form__caption--checkbox::before {
+  background-image: url("../img/checkbox_hover.svg");
+}
+
+.form__checkbox:checked + .form__caption--checkbox::before {
+  background-image: url("../img/checkbox_active.svg");
+}
+
+.form__checkbox:checked:hover:not(:disabled) + .form__caption--checkbox::before {
+  background-image: url("../img/checkbox_active-hover.svg");
+}
+
+.form__checkbox:disabled + .form__caption--checkbox::before {
+  background-image: url("../img/checkbox.svg");
+}
+
+.form__checkbox:disabled + .form__caption--checkbox {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.form__checkbox:checked:disabled + .form__caption--checkbox::before {
+  background-image: url("../img/checkbox_active-disabled.svg");
 }
 
 .form__list {
@@ -244,20 +319,6 @@
   }
 }
 
-.form__radio-svg {
-  position: absolute;
-  top: -7px;
-  left: -45px;
-
-  circle:last-child {
-    display: none;
-  }
-}
-
-// .form__checkbox {
-//   display: none;
-// }
-
 .form__input {
   flex-grow: 1;
   margin: 0;
@@ -277,7 +338,12 @@
   }
 
   &:focus {
-    border-color: $grey-dark;
+    border: 2px solid $grey-dark;
+    outline: none;
+  }
+
+  &:invalid {
+    border: 1px solid $error;
   }
 
   @media (min-width: $tablet-width) {
@@ -300,6 +366,7 @@
 }
 
 .form__item--email {
+  position: relative;
   margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
@@ -328,10 +395,12 @@
 }
 
 .form__item--phone {
+  position: relative;
   margin-bottom: 0;
 }
 
 .form__item--radio {
+  position: relative;
   margin-bottom: 25px;
   padding-left: 45px;
 
@@ -346,6 +415,7 @@
 }
 
 .form__item--checkbox {
+  position: relative;
   margin-bottom: 24px;
   padding-left: 46px;
 
@@ -359,7 +429,7 @@
     width: 45%;
 
     &:nth-child(2n) {
-      margin-left: 40px;
+      margin-left: 42px;
     }
   }
 
@@ -384,6 +454,14 @@
 }
 
 .form__email {
+  &:focus + .form__email-svg {
+    fill: $basic-green;
+  }
+
+  &:invalid + .form__email-svg {
+    fill: $error;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 15px 10px 15px 24px;
   }
@@ -393,7 +471,24 @@
   }
 }
 
+.form__email-svg {
+  position: absolute;
+  right: 15px;
+
+  @media (min-width: $tablet-width) {
+    right: 20px;
+  }
+}
+
 .form__phone {
+  &:focus + .form__email-svg {
+    fill: $basic-green;
+  }
+
+  &:invalid + .form__email-svg {
+    fill: $error;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 15px 10px 15px 19px;
   }

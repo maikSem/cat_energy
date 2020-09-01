@@ -287,18 +287,15 @@
 }
 
 .widget__scale {
-  position: relative;
-  display: flex;
-  align-items: center;
   flex-grow: 1;
   margin: 0 14px 0 18px;
+  padding: 0 6px;
   height: 14px;
   background-color: $basic-white;
   border: 1px solid $gray-light;
   border-radius: 6px;
 
   @media (min-width: $tablet-width) {
-    display: block;
     margin: 0 20px;
     height: 6px;
     background-color: $scale;
@@ -307,26 +304,39 @@
 }
 
 .widget__scale-toggle {
-  display: block;
-  width: 40%;
-  height: 6px;
-  background-color: $basic-green;
-  border-radius: 6px;
-  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
 
-  @media (min-width: $tablet-width) {
+  &::before {
     position: absolute;
-    top: -15px;
-    left: 75px;
+    content: "";
+    width: 50%;
+    height: 6px;
+    background-color: $basic-green;
+    border-radius: 6px;
+    cursor: pointer;
   }
-}
-
-.widget__scale-toggle--before {
-  margin-left: 5px;
-  margin-right: 5px;
 
   @media (min-width: $tablet-width) {
-   margin: 0;
+    width: min-content;
+
+    &::before {
+      left: 50%;
+      width: 34px;
+      height: 34px;
+      background: url("../img/slider-control.svg") 0 0 no-repeat;
+      background-size: 100%;
+    }
+
+    &:hover::before {
+      background-image: url("../img/slider-control-hover.svg");
+    }
+
+    &:active::before {
+      background-image: url("../img/slider-control-active.svg");
+    }
   }
 }
 
