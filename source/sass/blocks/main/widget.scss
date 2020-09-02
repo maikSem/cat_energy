@@ -287,6 +287,9 @@
 }
 
 .widget__scale {
+  display: flex;
+  align-items: center;
+  position: relative;
   flex-grow: 1;
   margin: 0 14px 0 18px;
   padding: 0 6px;
@@ -296,6 +299,7 @@
   border-radius: 6px;
 
   @media (min-width: $tablet-width) {
+    display: block;
     margin: 0 20px;
     height: 6px;
     background-color: $scale;
@@ -304,40 +308,63 @@
 }
 
 .widget__scale-toggle {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 100%;
+  width: 50%;
+  height: 6px;
+  background-color: $basic-green;
+  border-color: transparent;
+  border-radius: 6px;
+  cursor: pointer;
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 50%;
-    height: 6px;
-    background-color: $basic-green;
-    border-radius: 6px;
-    cursor: pointer;
+  &:focus {
+    outline: none;
   }
 
   @media (min-width: $tablet-width) {
-    width: min-content;
+    position: absolute;
+    top: -12px;
+    width: 34px;
+    height: 34px;
+    background: url("../img/slider-control.svg") 0 0 no-repeat;
+    background-size: 100%;
+    border: none;
 
-    &::before {
-      left: 50%;
-      width: 34px;
-      height: 34px;
-      background: url("../img/slider-control.svg") 0 0 no-repeat;
-      background-size: 100%;
-    }
-
-    &:hover::before {
+    &:hover {
       background-image: url("../img/slider-control-hover.svg");
     }
 
-    &:active::before {
+    &:active {
       background-image: url("../img/slider-control-active.svg");
     }
   }
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   width: 50%;
+  //   height: 6px;
+  //   background-color: $basic-green;
+  //   border-radius: 6px;
+  //   cursor: pointer;
+  // }
+
+  // @media (min-width: $tablet-width) {
+  //   width: min-content;
+
+  //   &::before {
+  //     left: 50%;
+  //     width: 34px;
+  //     height: 34px;
+  //     background: url("../img/slider-control.svg") 0 0 no-repeat;
+  //     background-size: 100%;
+  //   }
+
+  //   &:hover::before {
+  //     background-image: url("../img/slider-control-hover.svg");
+  //   }
+
+  //   &:active::before {
+  //     background-image: url("../img/slider-control-active.svg");
+  //   }
+  // }
 }
 
 .widget__title-was,
