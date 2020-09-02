@@ -44,11 +44,11 @@
           <div class="form__section-wrapper">
             <ul class="form__list form__list--information">
               <li class="form__item form__item--text">
-                <label class="form__caption form__caption--text" for="name">Имя:*</label>
+                <label class="form__caption form__caption--text" for="name" required>Имя:*</label>
                 <input class="form__input form__name" type="text" name="name" id="name" placeholder="Барсик">
               </li>
               <li class="form__item form__item--text">
-                <label class="form__caption form__caption--text" for="mass">Вес (кг):*</label>
+                <label class="form__caption form__caption--text" for="mass" required>Вес (кг):*</label>
                 <input class="form__input form__mass" type="number" name="mass" id="mass" value="7">
               </li>
               <li class="form__item form__item--text">
@@ -58,22 +58,20 @@
             </ul>
             <ul class="form__list form__list--radio">
               <li class="form__item form__item--radio">
-                <label class="form__caption form__caption--radio">
-                  <input class="form__radio" type="radio" name="programs-type" value="sliming">
-                  Похудение
-                </label>
+                <input class="form__radio visually-hidden" type="radio" name="programs-type" id="program-sliming"
+                  value="sliming">
+                <label class="form__caption form__caption--radio" for="program-sliming">Похудение</label>
               </li>
               <li class="form__item form__item--radio">
-                <label class="form__caption form__caption--radio">
-                  <input class="form__radio" type="radio" name="programs-type" value="mass">
-                  Набор массы
-                </label>
+                <input class="form__radio visually-hidden" type="radio" name="programs-type" id="program-mass"
+                  value="mass" disabled checked>
+                <label class="form__caption form__caption--radio" for="program-mass">Набор массы</label>
               </li>
               <li class="form__item form__item--radio">
-                <label class="form__caption form__caption--radio">
-                  <input class="form__radio" type="radio" name="programs-type" value="do-not-know">
-                  Не знаю (Нужен ваш совет)
-                </label>
+                <input class="form__radio visually-hidden" type="radio" name="programs-type" id="program-dont-know"
+                  value="do-not-know">
+                <label class="form__caption form__caption--radio" for="program-dont-know">Не знаю (Нужен ваш
+                  совет)</label>
               </li>
             </ul>
           </div>
@@ -86,13 +84,19 @@
                 <label class="form__caption form__caption--text" for="email">
                   E-mail*</label>
                 <input class="form__input form__email" type="email" name="email" id="email"
-                  placeholder="kuklachev@gmail.com">
+                  placeholder="kuklachev@gmail.com" required>
+                <svg class="form__email-svg" width="19" height="14">
+                  <use xlink:href="img/sprite.svg#icon-email"></use>
+                </svg>
               </li>
               <li class="form__item form__item--phone">
                 <label class="form__caption form__caption--phone" for="phone">
                   Телефон:*</label>
                 <input class="form__input form__phone" type="tel" name="phone" id="phone"
-                  placeholder="8 (960) 900-60-90">
+                  placeholder="8 (960) 900-60-90" required>
+                <svg class="form__email-svg" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
               </li>
             </ul>
           </div>
@@ -111,28 +115,21 @@
             <legend class="form__legend form__legend--additional">Дополнительно</legend>
             <ul class="form__list form__list--checkbox">
               <li class="form__item form__item--checkbox">
-                <label class="form__caption form__caption--checkbox">
-                  <input class="form__checkbox" type="checkbox" name="sugar">
-                  Cахарозаменитель
-                </label>
+                <input class="form__checkbox visually-hidden" type="checkbox" name="sugar" id="sugar">
+                <label class="form__caption form__caption--checkbox" for="sugar"> Cахарозаменитель</label>
               </li>
               <li class="form__item form__item--checkbox">
-                <label class="form__caption form__caption--checkbox">
-                  <input class="form__checkbox" type="checkbox" name="water">
-                  Питьевая вода
-                </label>
+                <input class="form__checkbox visually-hidden" type="checkbox" name="water" id="water">
+                <label class="form__caption form__caption--checkbox" for="water"> Питьевая вода</label>
               </li>
               <li class="form__item form__item--checkbox">
-                <label class="form__caption form__caption--checkbox">
-                  <input class="form__checkbox" type="checkbox" name="milk">
-                  Молоко
-                </label>
+                <input class="form__checkbox visually-hidden" type="checkbox" name="milk" id="milk">
+                <label class="form__caption form__caption--checkbox" for="milk">Молоко</label>
               </li>
               <li class="form__item form__item--checkbox">
-                <label class="form__caption form__caption--checkbox">
-                  <input class="form__checkbox" type="checkbox" name="vitamins">
-                  Витамины
-                </label>
+                <input class="form__checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins" checked
+                  disabled>
+                <label class="form__caption form__caption--checkbox" for="vitamins">Витамины</label>
               </li>
             </ul>
           </div>
@@ -154,6 +151,11 @@
     </div>
     <div class="map__wrapper-img">
       <picture>
+        <source type="image/webp" media="(min-width: 1440px)"
+          srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
         <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
         <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"

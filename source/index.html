@@ -136,6 +136,11 @@
         <div class="widget__cats">
           <div class="widget__cats-thick">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/before-desktop@1x.webp, img/before-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/before-tablet@1x.webp, img/before-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/before-mobile@1x.webp, img/before-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
               <img class="widget__cats-img widget__cats-img--thick" src="img/before-mobile@1x.png"
@@ -144,6 +149,11 @@
           </div>
           <div class="widget__cats-thin">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/after-desktop@1x.webp, img/after-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/after-tablet@1x.webp, img/after-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/after-mobile@1x.webp, img/after-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
               <img class="widget__cats-img widget__cats-img--thin" src="img/after-mobile@1x.png"
@@ -151,9 +161,11 @@
             </picture>
           </div>
           <div class="widget__toggle">
-            <p class="widget__toggle-was">Было</p>
-            <span class="widget__toggle-scale"></span>
-            <p class="widget__toggle-get">Стало</p>
+            <p class="widget__title-was">Было</p>
+            <div class="widget__scale">
+              <button class="widget__scale-toggle" type="button"></button>
+            </div>
+            <p class="widget__title-get">Стало</p>
           </div>
         </div>
       </div>
@@ -167,6 +179,11 @@
     </div>
     <div class="map__wrapper-img">
       <picture>
+        <source type="image/webp" media="(min-width: 1440px)"
+          srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
         <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
         <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
