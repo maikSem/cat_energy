@@ -6,6 +6,9 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
+const htmlmin = require("gulp-htmlmin");
+const uglify = require("gulp-uglify");
+const pipeline = require("readable-stream").pipeline;
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
@@ -30,6 +33,29 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+// HTML
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+}
+
+exports.html = html;
+
+// JS
+
+const js = () => {
+  return pipeline(
+    gulp.src("source/js/*.js"),
+    uglify(),
+    rename("scripts.min.js"),
+    gulp.dest("build/js")
+  );
+}
+
+exports.js = js;
 
 //Images
 
@@ -65,6 +91,27 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
+// Clean
+
+const clean = () => {
+  return del("build");
+}
+
+exports.clean = clean;
+
+// Copy
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**"
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"));
+};
+
 // Server
 
 const server = (done) => {
@@ -86,40 +133,29 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/js/*.js", gulp.series("js"));
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  clean,
+  copy,
+  styles,
+  sprite,
+  html,
+  js,
+  server,
+  watcher
 );
-
-// Clean
-
-const clean = () => {
-  return del("build");
-}
-
-exports.clean = clean;
-
-// Copy
-
-const copy = () => {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.html"
-  ], {
-    base: "source"
-  })
-    .pipe(gulp.dest("build"));
-};
 
 // Build
 
 const build = gulp.series(
   clean,
   copy,
+  html,
   styles,
+  js,
   sprite
 );
 
@@ -129,7 +165,8 @@ exports.build = build;
 
 const start = gulp.series(
   build,
-  server
+  server,
+  watcher
 );
 
 exports.start = start;

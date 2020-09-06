@@ -184,9 +184,9 @@
   @include text-size(14px, 18px);
   color: $grey-dark;
 
-  br {
-    display: none;
-  }
+  // br {
+  //   display: none;
+  // }
 
   &::before {
     position: absolute;

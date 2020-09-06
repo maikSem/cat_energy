@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
   <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
@@ -102,7 +104,7 @@
             </p>
           </li>
           <li class="advantages__item advantages__item--clock">
-            <p class="advantages__description advantages__description--clock">Уже через месяц наслаждайтесь <br>
+            <p class="advantages__description advantages__description--clock">Уже через месяц наслаждайтесь
               изменениями к лучшему <br> вашего
               питомца!</p>
           </li>
@@ -161,11 +163,11 @@
             </picture>
           </div>
           <div class="widget__toggle">
-            <p class="widget__title-was">Было</p>
+            <button class="widget__button widget__button--was" type="button">Было</button>
             <div class="widget__scale">
               <button class="widget__scale-toggle" type="button"></button>
             </div>
-            <p class="widget__title-get">Стало</p>
+            <button class="widget__button widget__button--get" type="button">Стало</button>
           </div>
         </div>
       </div>
@@ -173,22 +175,28 @@
   </main>
   <section class="map">
     <h2 class="visually-hidden">Как нас найти?</h2>
-    <div class="map__wrapper">
+    <div class="map__header">
       <p class="map__text">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
       <p class="map__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="map__city">Санкт-Петербург</span></p>
     </div>
-    <div class="map__wrapper-img">
-      <picture>
-        <source type="image/webp" media="(min-width: 1440px)"
-          srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)"
-          srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
-        <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-        <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
-          alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-      </picture>
+    <div class="map__wrapper">
+      <iframe class="map__iframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+        width="943" height="449" allowfullscreen
+        title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+      <div class="map__wrapper-img">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
+            alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </picture>
+      </div>
     </div>
   </section>
   <footer class="footer">
@@ -235,7 +243,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="js/scripts.min.js"></script>
 </body>
 
 </html>
