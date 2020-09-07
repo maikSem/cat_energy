@@ -48,6 +48,10 @@
       display: flex;
     }
   }
+
+  .main-nav--no-js .main-nav__toggle {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -117,22 +121,26 @@
   }
 }
 
-.main-nav__link--index {
-  @media (min-width: $desktop-width) {
-    color: $basic-white;
-  }
-}
-
-.main-nav__item--active .main-nav__link {
+.main-nav__link--active {
   @media (min-width: $tablet-width) {
     &::after {
-      position: absolute;
       content: "";
+      position: absolute;
       right: 0;
       bottom: 0;
       left: 0;
       height: 2px;
       background-color: $basic-green;
+    }
+  }
+}
+
+.main-nav__link--index {
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+
+    &::after {
+      background-color: $basic-white;
     }
   }
 }

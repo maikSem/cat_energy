@@ -21,14 +21,15 @@
             alt="Магазин функционального питания для котов «Кэт Энерджи»">
         </picture>
       </a>
-      <nav class="main-nav main-nav--opened">
+      <nav class="main-nav main-nav--opened main-nav--no-js">
         <button class="main-nav__toggle main-nav__toggle--closed" type="button">
-          </svg>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">Главная</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Подбор программы</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог
+              продукции</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="form.html">Подбор
+              программы</a></li>
         </ul>
       </nav>
     </div>
@@ -39,19 +40,19 @@
     <section class="form-order">
       <form class="form" action="https://echo.htmlacademy.ru" method="get">
         <div class="container">
-          <h2 class="form__title">Подбор программы</h2>
+          <h2 class="form__title form__title--top">Подбор программы</h2>
           <p class="form__text"> Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
         </div>
         <fieldset class="form__section form__section-header">
           <div class="form__section-wrapper">
             <ul class="form__list form__list--information">
               <li class="form__item form__item--text">
-                <label class="form__caption form__caption--text" for="name" required>Имя:*</label>
-                <input class="form__input form__name" type="text" name="name" id="name" placeholder="Барсик">
+                <label class="form__caption form__caption--text" for="name">Имя:*</label>
+                <input class="form__input form__name" type="text" name="name" id="name" placeholder="Барсик" required>
               </li>
               <li class="form__item form__item--text">
-                <label class="form__caption form__caption--text" for="mass" required>Вес (кг):*</label>
-                <input class="form__input form__mass" type="number" name="mass" id="mass" value="7">
+                <label class="form__caption form__caption--text" for="mass">Вес (кг):*</label>
+                <input class="form__input form__mass" type="number" name="mass" id="mass" value="7" required>
               </li>
               <li class="form__item form__item--text">
                 <label class="form__caption form__caption--age" for="age">Возраст (лет):</label>
@@ -80,7 +81,7 @@
         </fieldset>
         <fieldset class="form__section form__section-contact">
           <div class="container">
-            <legend class="form__legend form__legend--contact">Контактные данные <br> (владельца кота)</legend>
+            <h3 class="form__title form__title--contact">Контактные данные <br> (владельца кота)</h3>
             <ul class="form__list form__list--email">
               <li class="form__item form__item--email">
                 <label class="form__caption form__caption--text" for="email">
@@ -105,7 +106,7 @@
         </fieldset>
         <fieldset class="form__section form__section-massage">
           <div class="container">
-            <legend class="form__legend form__legend--coment">Комментарий</legend>
+            <h3 class="form__title form__title--coment">Комментарий</h3>
             <div class="form__wrapper-textarea">
               <textarea class="form__textarea" cols="30" rows="8" name="message"
                 placeholder="Расскажите обо всех повАдках кота"></textarea>
@@ -114,7 +115,7 @@
         </fieldset>
         <fieldset class="form__section form__section-additional">
           <div class="container">
-            <legend class="form__legend form__legend--additional">Дополнительно</legend>
+            <h3 class="form__title form__title--additional">Дополнительно</h3>
             <ul class="form__list form__list--checkbox">
               <li class="form__item form__item--checkbox">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="sugar" id="sugar">
@@ -216,6 +217,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/scripts.min.js"></script>
 </body>
 
 </html>

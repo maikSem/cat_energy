@@ -1,6 +1,5 @@
 .programs__wrapper {
-  padding-top: 22px;
-  padding-bottom: 27px;
+  padding: 22px 0 27px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -61,10 +60,10 @@
   }
 
   &::before {
+    content: "";
     position: absolute;
     top: -7px;
     left: 2px;
-    content: "";
     width: 50px;
     height: 50px;
     background-color: $basic-green;
@@ -100,8 +99,8 @@
 
 .programs__title--slim {
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     top: -10px;
     left: 10px;
     width: 36px;
@@ -134,8 +133,8 @@
   padding-left: 42px;
 
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     top: 4px;
     left: -7px;
     width: 67px;
@@ -214,8 +213,8 @@
   color: $basic-black;
 
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     top: 4px;
     left: 102px;
     width: 32px;

@@ -68,10 +68,10 @@
     min-height: 280px;
 
     &::after {
-      position: absolute;
-      z-index: -1;
       content: "";
+      position: absolute;
       top: 0;
+      z-index: -1;
 
       @include special-font-normal;
       @include text-size(280px, 280px);
@@ -189,17 +189,17 @@
   // }
 
   &::before {
+    content: "";
     position: absolute;
     left: 0;
-    content: "";
     width: 60px;
     height: 60px;
     background-color: $basic-green;
   }
 
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     left: 5px;
     width: 50px;
     height: 50px;

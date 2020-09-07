@@ -6,12 +6,12 @@
     background-color: transparent;
 
     &::after {
-      position: absolute;
-      z-index: -1;
       content: "";
+      position: absolute;
       bottom: 0;
       right: 0;
       left: 0;
+      z-index: -1;
       height: 42.75%;
       background-color: $special-grey-dark;
     }
@@ -27,9 +27,9 @@
 .widget__wrapper {
   @media (min-width: $desktop-width) {
     display: flex;
-    width: 1440px;
     margin: 0 auto;
     padding: 0 110px;
+    width: 1440px;
   }
 }
 
@@ -39,8 +39,8 @@
   min-width: 320px;
 
   @media (min-width: $tablet-width) {
-    width: 768px;
     padding: 0 30px;
+    width: 768px;
   }
 
   @media (min-width: $desktop-width) {
@@ -293,9 +293,9 @@
 }
 
 .widget__scale {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
   flex-grow: 1;
   margin: -3px 14px 0 18px;
   padding: 0 6px;

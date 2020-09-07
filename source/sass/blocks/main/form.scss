@@ -8,32 +8,11 @@
   @include special-font-normal;
 }
 
-.form__title {
-  margin: 27px 0 37px 0;
-
-  @include text-size(36px, 36px);
-  font-weight: normal;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 62px;
-    margin-bottom: 54px;
-
-    @include text-size(60px, 60px);
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-left: 40px;
-    margin-top: 72px;
-  }
-}
-
 .form__text {
   margin: 0 0 39px 0;
 
   @include text-size(14px, 18px);
-  text: {
-    transform: uppercase;
-  }
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     margin: 0 0 66px 40px;
@@ -54,12 +33,12 @@
   border: none;
 
   &::after {
-    position: absolute;
-    z-index: -1;
     content: "";
+    position: absolute;
     top: 40px;
     right: 0;
     left: 60px;
+    z-index: -1;
     height: 2px;
     background-color: $basic-green;
   }
@@ -169,8 +148,8 @@
 }
 
 .form__caption--radio::before {
-  position: absolute;
   content: "";
+  position: absolute;
   top: -7px;
   left: 0;
   width: 30px;
@@ -212,10 +191,10 @@
 }
 
 .form__caption--checkbox::before {
+  content: "";
   position: absolute;
   left: 0;
   top: -5px;
-  content: "";
   width: 30px;
   height: 30px;
   background: url("../img/checkbox.svg") 0 0 no-repeat;
@@ -328,9 +307,7 @@
 
   &::placeholder {
     color: $grey-dark;
-    text: {
-      transform: uppercase;
-    }
+    text-transform: uppercase;
   }
 
   &:hover {
@@ -338,7 +315,7 @@
   }
 
   &:focus {
-    border: 2px solid $grey-dark;
+    border: 1px solid $grey-dark;
     outline: none;
   }
 
@@ -494,9 +471,12 @@
   }
 }
 
-.form__legend {
+.form__title {
   z-index: 2;
+  display: inline-block;
+  margin: 0;
   padding: 27px 15px 32px 0;
+  font-weight: normal;
   background-color: $basic-white;
 
   @include text-size(24px, 26px);
@@ -505,6 +485,26 @@
     padding: 0 40px 78px 40px;
 
     @include text-size(36px, 36px);
+  }
+}
+
+.form__title--top {
+  margin: 27px 0 37px 0;
+  padding: 0;
+
+  @include text-size(36px, 36px);
+  font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 62px;
+    margin-bottom: 54px;
+
+    @include text-size(60px, 60px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 40px;
+    margin-top: 72px;
   }
 }
 
@@ -519,7 +519,7 @@
   }
 }
 
-.form__legend--contact {
+.form__title--contact {
   padding-top: 26px;
 
   &::after {
@@ -539,14 +539,14 @@
   }
 }
 
-.form__legend--coment,
-.form__legend--additional {
+.form__title--coment,
+.form__title--additional {
   @media (max-width: 767px) {
     padding-right: 22px;
   }
 }
 
-.form__legend--additional {
+.form__title--additional {
   padding-top: 28px;
   padding-bottom: 39px;
 
@@ -565,9 +565,7 @@
 
     @include special-font-normal;
     @include text-size(16px, 18px);
-    text: {
-      transform: uppercase;
-    }
+    text-transform: uppercase;
     color: $grey-dark;
   }
 
@@ -607,9 +605,7 @@
 
   @include basic-font-normal;
   @include text-size(14px, 16px);
-  text: {
-    align: center;
-  }
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     display: inline-block;
