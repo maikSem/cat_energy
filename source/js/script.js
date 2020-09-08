@@ -16,6 +16,19 @@ menuButton.addEventListener("click", function () {
   }
 });
 
-mainLink.addEventListener("click", function () {
-  mainLink.classList.add("main-nav__link--active")
-})
+
+function initMap() {
+  var map;
+  var marker;
+  var markerImage = "img/map-pin.png",
+    map = new google.maps.Map(document.querySelector(".map__api"), {
+      center: { lat: 59.938765, lng: 30.323015 },
+      zoom: 15
+    });
+
+  marker = new google.maps.Marker({
+    position: { lat: 59.938765, lng: 30.323015 },
+    map: map,
+    icon: markerImage
+  });
+}

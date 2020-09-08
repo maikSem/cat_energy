@@ -120,3 +120,11 @@
 .map--grey {
   background-color: $basic-grey;
 }
+
+.map__api {
+  height: 364px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}

@@ -179,10 +179,7 @@
       <p class="map__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="map__city">Санкт-Петербург</span></p>
     </div>
     <div class="map__wrapper">
-      <iframe class="map__iframe"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
-        width="943" height="449" allowfullscreen
-        title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+      <div class="map__api"></div>
       <div class="map__wrapper-img">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)"
@@ -242,6 +239,8 @@
       </div>
     </div>
   </footer>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLsm-t08XSnrtJFO9KuDViWU1ZuuS601k&callback=initMap"></script>
   <script src="js/scripts.min.js"></script>
 </body>
 
