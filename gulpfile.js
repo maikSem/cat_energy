@@ -38,7 +38,9 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest("build"));
 }
 
@@ -62,8 +64,13 @@ exports.js = js;
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
-      imagemin.optipng({ optimizationLevel: 3 }),
-      imagemin.mozjpeg({ quality: 85, progressive: true }),
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.mozjpeg({
+        quality: 85,
+        progressive: true
+      }),
       imagemin.svgo()
     ]))
 }
@@ -73,8 +80,10 @@ exports.images = images;
 //Webp
 
 const webpImg = () => {
-  return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(webp({ quality: 90 }))
+  return gulp.src("build/img/**/*.{png,jpg}")
+    .pipe(webp({
+      quality: 90
+    }))
     .pipe(gulp.dest("build/img"))
 }
 
@@ -103,12 +112,12 @@ exports.clean = clean;
 
 const copy = () => {
   return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**"
-  ], {
-    base: "source"
-  })
+      "source/fonts/**/*.{woff,woff2}",
+      "source/img/**",
+      "source/js/**"
+    ], {
+      base: "source"
+    })
     .pipe(gulp.dest("build"));
 };
 
@@ -132,15 +141,16 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
   gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("source/js/*.js", gulp.series("js"));
+  gulp.watch("source/*.html").on("change", sync.reload);
 }
 
 exports.default = gulp.series(
   clean,
   copy,
   styles,
+  webpImg,
   sprite,
   html,
   js,
@@ -155,6 +165,7 @@ const build = gulp.series(
   copy,
   html,
   styles,
+  webpImg,
   js,
   sprite
 );

@@ -7,7 +7,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 82px 0 71px 40px;
+    padding: 82px 0 71px 0;
   }
 }
 
@@ -54,6 +54,7 @@
 
   @include special-font-normal;
   @include text-size(24px, 37px);
+
   text: {
     align: center;
     transform: uppercase;
@@ -201,15 +202,18 @@
 
 .programs__link {
   position: relative;
-  display: block;
+  display: inline-block;
   margin: 0 20px 22px 0;
+  width: max-content;
 
   @include special-font-normal;
   @include text-size(16px, 16px);
+
   text: {
     decoration: none;
     transform: uppercase;
   }
+
   color: $basic-black;
 
   &::after {

@@ -87,6 +87,7 @@
 .widget__description {
   margin: 0;
   margin-bottom: 25px;
+  padding-right: 10px;
 
   @include text-size(14px, 18px);
   text-align: left;
@@ -149,6 +150,7 @@
 
   @include special-font-normal;
   @include text-size(24px, 24px);
+
   text: {
     align: center;
     transform: uppercase;
@@ -198,6 +200,7 @@
 
   @include special-font-normal;
   @include text-size(14px, 20px);
+
   text: {
     align: center;
     transform: uppercase;
@@ -346,6 +349,7 @@
 
 .widget__button {
   padding: 0 0 2px 0;
+
   @include special-font-normal;
   @include text-size(16px, 20px);
   text-transform: uppercase;

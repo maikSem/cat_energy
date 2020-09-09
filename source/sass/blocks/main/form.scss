@@ -22,7 +22,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
-    padding: 0 40px;
+    padding-right: 40px;
   }
 }
 
@@ -276,7 +276,6 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     margin: 0;
-    padding: 0 0 0 40px;
   }
 }
 
@@ -295,6 +294,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
+    padding: 0;
   }
 }
 
@@ -308,6 +308,7 @@
   &::placeholder {
     color: $grey-dark;
     text-transform: uppercase;
+    opacity: 1;
   }
 
   &:hover {
@@ -486,6 +487,10 @@
 
     @include text-size(36px, 36px);
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -40px;
+  }
 }
 
 .form__title--top {
@@ -503,7 +508,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 40px;
     margin-top: 72px;
   }
 }
@@ -514,13 +518,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 0 40px;
+    margin: 0;
     padding: 0;
   }
 }
 
 .form__title--contact {
   padding-top: 26px;
+  width: 200px;
 
   &::after {
     margin-top: -20px;
@@ -528,13 +533,10 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
+    width: auto;
 
     &::after {
       margin-top: 10px;
-    }
-
-    br {
-      display: none;
     }
   }
 }
@@ -567,6 +569,7 @@
     @include text-size(16px, 18px);
     text-transform: uppercase;
     color: $grey-dark;
+    opacity: 1;
   }
 
   @media (min-width: $tablet-width) {
@@ -593,7 +596,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 5px 0 14px 40px;
+    margin: 5px 0 14px 0;
     padding-top: 16px;
     width: 568px;
   }
