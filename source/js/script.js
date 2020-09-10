@@ -3,6 +3,7 @@ var menuButton = document.querySelector(".main-nav__toggle");
 var mainLink = document.querySelector(".main-nav__link")
 
 if (menu.classList.contains("main-nav--no-js")) {
+  menuButton.classList.remove("main-nav__toggle--closed")
   menu.classList.remove("main-nav--no-js");
 }
 

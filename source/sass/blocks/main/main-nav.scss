@@ -52,6 +52,10 @@
   .main-nav--no-js .main-nav__toggle {
     display: none;
   }
+
+  .main-nav--no-js .main-nav__list {
+    display: block;
+  }
 }
 
 .main-nav__list {

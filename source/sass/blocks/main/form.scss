@@ -182,10 +182,6 @@
   cursor: default;
 }
 
-.form__checkbox {
-  position: relative;
-}
-
 .form__caption--checkbox {
   cursor: pointer;
 }
@@ -561,10 +557,9 @@
 .form__textarea {
   width: 100%;
   border: 1px solid $border-grey-input;
+  padding: 12px 0 0 13px;
 
   &::placeholder {
-    padding: 12px 0 0 13px;
-
     @include special-font-normal;
     @include text-size(16px, 18px);
     text-transform: uppercase;
@@ -574,10 +569,9 @@
 
   @media (min-width: $tablet-width) {
     min-height: 174px;
+    padding: 6px 10px 0 15px;
 
     &::placeholder {
-      padding: 6px 10px 0 15px;
-
       @include text-size(20px, 30px);
     }
   }
