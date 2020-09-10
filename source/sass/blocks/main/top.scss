@@ -66,7 +66,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 0 41px 87px;
-    padding: 0;
+    padding: 0 30px 0 0; /*Удали 30*/
 
     @include text-size(60px, 60px);
     text-align: left;
@@ -82,6 +82,7 @@
 .top__slogan {
   margin: 0;
   margin-bottom: 29px;
+  padding-right: 30px;
 
   @include special-font-normal;
   font-size: 14px;

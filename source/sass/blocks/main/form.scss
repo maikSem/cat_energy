@@ -10,6 +10,7 @@
 
 .form__text {
   margin: 0 0 39px 0;
+  padding-right: 30px;
 
   @include text-size(14px, 18px);
   text-transform: uppercase;
@@ -22,7 +23,6 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
-    padding-right: 40px;
   }
 }
 

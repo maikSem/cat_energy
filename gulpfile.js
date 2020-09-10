@@ -112,12 +112,12 @@ exports.clean = clean;
 
 const copy = () => {
   return gulp.src([
-      "source/fonts/**/*.{woff,woff2}",
-      "source/img/**",
-      "source/js/**"
-    ], {
-      base: "source"
-    })
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**"
+  ], {
+    base: "source"
+  })
     .pipe(gulp.dest("build"));
 };
 
