@@ -2,6 +2,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 74px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 72px;
+  }
 }
 
 .form-order {
@@ -35,7 +39,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 40px;
+    top: 42px;
     right: 0;
     left: 60px;
     z-index: -1;
@@ -52,6 +56,10 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+
+    &::after {
+      top: 22px;
+    }
   }
 }
 
@@ -90,13 +98,21 @@
 .form__section-contact {
   @media (min-width: $tablet-width) {
     margin: 0;
-    margin-bottom: 67px;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 68px;
   }
 }
 
 .form__section-massage {
   @media (min-width: $tablet-width) {
     margin: 0 0 62px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 66px;
   }
 }
 
@@ -294,6 +310,7 @@
   flex-grow: 1;
   margin: 0;
   padding: 12px 10px 12px 15px;
+  height: 45px;
   color: $grey-dark;
   border: 1px solid $border-grey-input;
 
@@ -326,16 +343,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 16px 10px 14px 15px;
+    height: 52px;
+    padding: 10px 10px 10px 15px;
 
     &::placeholder {
       @include text-size(20px, 30px);
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 18px;
-    padding-bottom: 15px;
   }
 }
 
@@ -358,10 +371,10 @@
 }
 
 .form__item--text {
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 
   &:last-child {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: $tablet-width) {
@@ -442,11 +455,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 15px 10px 15px 24px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 15px 10px 15px 24px;
+    padding: 10px 10px 10px 24px;
   }
 }
 
@@ -469,7 +478,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 15px 10px 15px 19px;
+    padding: 10px 10px 10px 19px;
   }
 }
 
@@ -484,7 +493,7 @@
   @include text-size(24px, 26px);
 
   @media (min-width: $tablet-width) {
-    padding: 0 40px 78px 40px;
+    padding: 0 40px 76px 40px;
 
     @include text-size(36px, 36px);
   }
@@ -562,7 +571,8 @@
 .form__textarea {
   width: 100%;
   border: 1px solid $border-grey-input;
-  padding: 12px 0 0 13px;
+  padding: 13px 0 0 13px;
+  min-height: 150px;
 
   &::placeholder {
     @include special-font-normal;
@@ -574,7 +584,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 174px;
-    padding: 6px 10px 0 15px;
+    padding: 8px 10px 0 17px;
 
     &::placeholder {
       @include text-size(20px, 30px);
@@ -603,7 +613,7 @@
 
 .form__required-areas {
   display: block;
-  padding: 21px 0 32px 0;
+  padding: 21px 0 30px 0;
 
   @include basic-font-normal;
   @include text-size(14px, 16px);
