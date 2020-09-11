@@ -13,14 +13,16 @@
 <body class="body">
   <header class="header">
     <div class="header__wrapper header__wrapper--list">
-      <a class="header__logo header__logo--index" href="index.html">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="header__logo-img" src="img/logo-mobile.svg" width="190" height="37"
-            alt="Магазин функционального питания для котов «Кэт Энерджи»">
-        </picture>
-      </a>
+      <div class="header__wrapper--logo">
+        <a class="header__logo header__logo--index" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="header__logo-img" src="img/logo-mobile.svg" width="190" height="37"
+              alt="Магазин функционального питания для котов «Кэт Энерджи»">
+          </picture>
+        </a>
+      </div>
       <nav class="main-nav main-nav--closed main-nav--no-js">
         <button class="main-nav__toggle main-nav__toggle--closed" type="button">
         </button>
@@ -384,7 +386,8 @@
   </section>
   <footer class="footer">
     <div class="footer__wrapper">
-      <a href="index.html" class="footer__link-logo" aria-label="Перейти на главную страницу">
+      <a href="index.html" class="footer__link-logo" aria-label="Перейти на главную страницу"
+        title="На главную страницу">
         <svg class="footer__logo" width="128" height="24">
           <title>Перейти на главную страницу</title>
           <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
@@ -393,7 +396,8 @@
       <div class="footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте"
+              title="Мы в Контакте">
               <svg class="social__svg social__svg--vk" width="23" height="16">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
@@ -401,7 +405,7 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"
-              aria-label="Инстаграм">
+              aria-label="Инстаграм" title="Мы в Инстаграме">
               <svg class="social__svg social__svg--insta" width="16" height="16">
                 <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
@@ -409,7 +413,7 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"
-              aria-label="Фэйсбук">
+              aria-label="Фэйсбук" title="Мы в Фэйсбуке">
               <svg class="social__svg social__svg--fb" width="22" height="22">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
@@ -419,7 +423,8 @@
       </div>
       <div class="footer__copyright copyright">
         <a class="copyright__link-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive"
+          title="Перейти на страницу интенсива">
           <svg class="copyright__svg" width="27" height="34" viewBox="0 0 27 34">
             <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>

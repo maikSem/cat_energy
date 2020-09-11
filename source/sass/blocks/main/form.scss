@@ -297,6 +297,15 @@
   color: $grey-dark;
   border: 1px solid $border-grey-input;
 
+  &[type="number"] {
+    appearance: textfield;
+  }
+
+  &[type="number"]:hover,
+  [type="number"]:focus {
+    appearance: none;
+  }
+
   &::placeholder {
     color: $grey-dark;
     text-transform: uppercase;

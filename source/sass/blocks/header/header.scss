@@ -18,6 +18,14 @@
   }
 }
 
+.header__wrapper--logo {
+  border-bottom: 1px solid $border-grey;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
 .header__wrapper--list {
   @media (min-width: $tablet-width) {
     padding-top: 24px;
@@ -29,11 +37,10 @@
 }
 
 .header__logo {
-  display: block;
+  display: inline-block;
   margin: 0;
   padding-left: 20px;
   padding-bottom: 12px;
-  border-bottom: 1px solid $border-grey;
 
   &:hover {
     opacity: 0.8;
