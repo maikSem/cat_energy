@@ -2,38 +2,22 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 74px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 72px;
+  }
 }
 
 .form-order {
   @include special-font-normal;
 }
 
-.form__title {
-  margin: 27px 0 37px 0;
-
-  @include text-size(36px, 36px);
-  font-weight: normal;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 62px;
-    margin-bottom: 54px;
-
-    @include text-size(60px, 60px);
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-left: 40px;
-    margin-top: 72px;
-  }
-}
-
 .form__text {
   margin: 0 0 39px 0;
+  padding-right: 30px;
 
   @include text-size(14px, 18px);
-  text: {
-    transform: uppercase;
-  }
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     margin: 0 0 66px 40px;
@@ -43,7 +27,6 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
-    padding: 0 40px;
   }
 }
 
@@ -54,12 +37,12 @@
   border: none;
 
   &::after {
-    position: absolute;
-    z-index: -1;
     content: "";
-    top: 40px;
+    position: absolute;
+    top: 42px;
     right: 0;
     left: 60px;
+    z-index: -1;
     height: 2px;
     background-color: $basic-green;
   }
@@ -73,6 +56,10 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+
+    &::after {
+      top: 22px;
+    }
   }
 }
 
@@ -111,13 +98,21 @@
 .form__section-contact {
   @media (min-width: $tablet-width) {
     margin: 0;
-    margin-bottom: 67px;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 68px;
   }
 }
 
 .form__section-massage {
   @media (min-width: $tablet-width) {
     margin: 0 0 62px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 66px;
   }
 }
 
@@ -164,13 +159,9 @@
   cursor: pointer;
 }
 
-.form__radio {
-  position: relative;
-}
-
 .form__caption--radio::before {
-  position: absolute;
   content: "";
+  position: absolute;
   top: -7px;
   left: 0;
   width: 30px;
@@ -203,19 +194,15 @@
   cursor: default;
 }
 
-.form__checkbox {
-  position: relative;
-}
-
 .form__caption--checkbox {
   cursor: pointer;
 }
 
 .form__caption--checkbox::before {
+  content: "";
   position: absolute;
   left: 0;
   top: -5px;
-  content: "";
   width: 30px;
   height: 30px;
   background: url("../img/checkbox.svg") 0 0 no-repeat;
@@ -297,7 +284,6 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     margin: 0;
-    padding: 0 0 0 40px;
   }
 }
 
@@ -316,6 +302,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
+    padding: 0;
   }
 }
 
@@ -323,14 +310,23 @@
   flex-grow: 1;
   margin: 0;
   padding: 12px 10px 12px 15px;
+  height: 45px;
   color: $grey-dark;
   border: 1px solid $border-grey-input;
 
+  &[type="number"] {
+    appearance: textfield;
+  }
+
+  &[type="number"]:hover,
+  [type="number"]:focus {
+    appearance: none;
+  }
+
   &::placeholder {
     color: $grey-dark;
-    text: {
-      transform: uppercase;
-    }
+    text-transform: uppercase;
+    opacity: 1;
   }
 
   &:hover {
@@ -338,7 +334,7 @@
   }
 
   &:focus {
-    border: 2px solid $grey-dark;
+    border: 1px solid $grey-dark;
     outline: none;
   }
 
@@ -347,16 +343,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 16px 10px 14px 15px;
+    height: 52px;
+    padding: 10px 10px 10px 15px;
 
     &::placeholder {
       @include text-size(20px, 30px);
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 18px;
-    padding-bottom: 15px;
   }
 }
 
@@ -379,10 +371,10 @@
 }
 
 .form__item--text {
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 
   &:last-child {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: $tablet-width) {
@@ -463,11 +455,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 15px 10px 15px 24px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 15px 10px 15px 24px;
+    padding: 10px 10px 10px 24px;
   }
 }
 
@@ -490,21 +478,47 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 15px 10px 15px 19px;
+    padding: 10px 10px 10px 19px;
   }
 }
 
-.form__legend {
+.form__title {
   z-index: 2;
+  display: inline-block;
+  margin: 0;
   padding: 27px 15px 32px 0;
+  font-weight: normal;
   background-color: $basic-white;
 
   @include text-size(24px, 26px);
 
   @media (min-width: $tablet-width) {
-    padding: 0 40px 78px 40px;
+    padding: 0 40px 76px 40px;
 
     @include text-size(36px, 36px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -40px;
+  }
+}
+
+.form__title--top {
+  margin: 27px 0 37px 0;
+  padding: 0;
+
+  @include text-size(36px, 36px);
+  font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 62px;
+    margin-bottom: 54px;
+
+    @include text-size(60px, 60px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 72px;
   }
 }
 
@@ -514,13 +528,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 0 40px;
+    margin: 0;
     padding: 0;
   }
 }
 
-.form__legend--contact {
+.form__title--contact {
   padding-top: 26px;
+  width: 200px;
 
   &::after {
     margin-top: -20px;
@@ -528,25 +543,22 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
+    width: auto;
 
     &::after {
       margin-top: 10px;
     }
-
-    br {
-      display: none;
-    }
   }
 }
 
-.form__legend--coment,
-.form__legend--additional {
+.form__title--coment,
+.form__title--additional {
   @media (max-width: 767px) {
     padding-right: 22px;
   }
 }
 
-.form__legend--additional {
+.form__title--additional {
   padding-top: 28px;
   padding-bottom: 39px;
 
@@ -559,24 +571,22 @@
 .form__textarea {
   width: 100%;
   border: 1px solid $border-grey-input;
+  padding: 13px 0 0 13px;
+  min-height: 150px;
 
   &::placeholder {
-    padding: 12px 0 0 13px;
-
     @include special-font-normal;
     @include text-size(16px, 18px);
-    text: {
-      transform: uppercase;
-    }
+    text-transform: uppercase;
     color: $grey-dark;
+    opacity: 1;
   }
 
   @media (min-width: $tablet-width) {
     min-height: 174px;
+    padding: 8px 10px 0 17px;
 
     &::placeholder {
-      padding: 6px 10px 0 15px;
-
       @include text-size(20px, 30px);
     }
   }
@@ -595,7 +605,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 5px 0 14px 40px;
+    margin: 5px 0 14px 0;
     padding-top: 16px;
     width: 568px;
   }
@@ -603,13 +613,11 @@
 
 .form__required-areas {
   display: block;
-  padding: 21px 0 32px 0;
+  padding: 21px 0 30px 0;
 
   @include basic-font-normal;
   @include text-size(14px, 16px);
-  text: {
-    align: center;
-  }
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     display: inline-block;

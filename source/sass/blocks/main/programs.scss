@@ -1,6 +1,5 @@
 .programs__wrapper {
-  padding-top: 22px;
-  padding-bottom: 27px;
+  padding: 22px 0 27px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -8,7 +7,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 82px 0 71px 40px;
+    padding: 82px 0 71px 0;
   }
 }
 
@@ -55,16 +54,17 @@
 
   @include special-font-normal;
   @include text-size(24px, 37px);
+
   text: {
     align: center;
     transform: uppercase;
   }
 
   &::before {
+    content: "";
     position: absolute;
     top: -7px;
     left: 2px;
-    content: "";
     width: 50px;
     height: 50px;
     background-color: $basic-green;
@@ -100,8 +100,8 @@
 
 .programs__title--slim {
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     top: -10px;
     left: 10px;
     width: 36px;
@@ -134,8 +134,8 @@
   padding-left: 42px;
 
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     top: 4px;
     left: -7px;
     width: 67px;
@@ -202,20 +202,23 @@
 
 .programs__link {
   position: relative;
-  display: block;
+  display: inline-block;
   margin: 0 20px 22px 0;
+  width: max-content;
 
   @include special-font-normal;
   @include text-size(16px, 16px);
+
   text: {
     decoration: none;
     transform: uppercase;
   }
+
   color: $basic-black;
 
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     top: 4px;
     left: 102px;
     width: 32px;

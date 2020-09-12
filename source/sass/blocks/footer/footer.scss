@@ -25,9 +25,7 @@
 .footer__link-logo {
   display: block;
   padding: 39px 0 27px 0;
-  text: {
-    align: center;
-  }
+  text-align: center;
   border-bottom: 1px solid $border-footer;
 
   @media (min-width: $tablet-width) {

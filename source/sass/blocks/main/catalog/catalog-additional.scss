@@ -56,6 +56,7 @@
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
     padding: 0 35px 0 40px;
+    margin: 0 0 78px -40px;
     margin-bottom: 78px;
   }
 }
@@ -86,7 +87,8 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: space-between;  /*Временно*/
+    justify-content: space-between;
+    /*Временно*/
     border: 1px solid $border-grey;
     padding-right: 0;
   }

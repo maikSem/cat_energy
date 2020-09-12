@@ -3,24 +3,21 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    min-height: 1080px; /*Временно*/
     background-color: transparent;
 
     &::after {
-      position: absolute;
-      z-index: -1;
       content: "";
+      position: absolute;
       bottom: 0;
       right: 0;
       left: 0;
+      z-index: -1;
       height: 42.75%;
       background-color: $special-grey-dark;
     }
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 656px; /*Временно*/
-
     &::after {
       height: 70.5%;
     }
@@ -30,9 +27,9 @@
 .widget__wrapper {
   @media (min-width: $desktop-width) {
     display: flex;
-    width: 1440px;
     margin: 0 auto;
     padding: 0 110px;
+    width: 1440px;
   }
 }
 
@@ -42,8 +39,8 @@
   min-width: 320px;
 
   @media (min-width: $tablet-width) {
-    width: 768px;
     padding: 0 30px;
+    width: 768px;
   }
 
   @media (min-width: $desktop-width) {
@@ -62,7 +59,7 @@
   @media (min-width: $desktop-width) {
     display: block;
     z-index: 2;
-    margin-bottom: 75px;
+    margin-bottom: 78px;
     background-color: transparent;
   }
 }
@@ -90,6 +87,7 @@
 .widget__description {
   margin: 0;
   margin-bottom: 25px;
+  padding-right: 10px;
 
   @include text-size(14px, 18px);
   text-align: left;
@@ -109,7 +107,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 69px;
-    padding-right: 145px;
+    padding-right: 110px;
   }
 }
 
@@ -152,6 +150,7 @@
 
   @include special-font-normal;
   @include text-size(24px, 24px);
+
   text: {
     align: center;
     transform: uppercase;
@@ -201,6 +200,7 @@
 
   @include special-font-normal;
   @include text-size(14px, 20px);
+
   text: {
     align: center;
     transform: uppercase;
@@ -255,7 +255,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 70%;
+    width: 79%;
   }
 }
 
@@ -265,33 +265,42 @@
 }
 
 .widget__cats-img {
+  position: relative;
   max-width: 100%;
   height: 100%;
+
+  @media (min-width: $tablet-width) {
+    left: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 30px;
+  }
 }
 
 .widget__toggle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 12px auto 20px auto;
+  margin: 28px auto 32px auto;
   width: 196px;
 
   @media (min-width: $tablet-width) {
-    margin: -8px auto 50px auto;
+    margin: 10px auto 67px auto;
     width: 570px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 13px 0 50px auto;
+    margin: 35px 0 50px auto;
   }
 }
 
 .widget__scale {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
   flex-grow: 1;
-  margin: 0 14px 0 18px;
+  margin: -3px 14px 0 18px;
   padding: 0 6px;
   height: 14px;
   background-color: $basic-white;
@@ -321,9 +330,9 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: -12px;
-    width: 34px;
-    height: 34px;
+    top: -15px;
+    width: 40px;
+    height: 40px;
     background: url("../img/slider-control.svg") 0 0 no-repeat;
     background-size: 100%;
     border: none;
@@ -336,43 +345,25 @@
       background-image: url("../img/slider-control-active.svg");
     }
   }
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   width: 50%;
-  //   height: 6px;
-  //   background-color: $basic-green;
-  //   border-radius: 6px;
-  //   cursor: pointer;
-  // }
-
-  // @media (min-width: $tablet-width) {
-  //   width: min-content;
-
-  //   &::before {
-  //     left: 50%;
-  //     width: 34px;
-  //     height: 34px;
-  //     background: url("../img/slider-control.svg") 0 0 no-repeat;
-  //     background-size: 100%;
-  //   }
-
-  //   &:hover::before {
-  //     background-image: url("../img/slider-control-hover.svg");
-  //   }
-
-  //   &:active::before {
-  //     background-image: url("../img/slider-control-active.svg");
-  //   }
-  // }
 }
 
-.widget__title-was,
-.widget__title-get {
+.widget__button {
+  padding: 0 0 2px 0;
+
   @include special-font-normal;
   @include text-size(16px, 20px);
-  text: {
-    transform: uppercase;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dotted $gray-light;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 1px solid $gray-light;
+  }
+
+  &:active {
+    border-bottom: none;
   }
 
   @media (min-width: $tablet-width) {

@@ -25,15 +25,15 @@
   }
 }
 
+.copyright__link-logo:hover .copyright__svg {
+  fill: $basic-green;
+}
+
+.copyright__link-logo:active .copyright__svg {
+  fill: $basic-green;
+  opacity: 0.3;
+}
+
 .copyright__svg {
   fill: $gray-middle;
-
-  &:hover {
-    fill: $basic-green;
-  }
-
-  &:active {
-    fill: $basic-green;
-    opacity: 0.3;
-  }
 }

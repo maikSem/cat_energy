@@ -1,6 +1,4 @@
 .advantages {
-  width: 100%;
-
   @media (min-width: $tablet-width) {
     border-bottom: 1px solid $border-grey;
   }
@@ -18,7 +16,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 0 11px 40px;
+    padding: 0 0 11px 0;
   }
 }
 
@@ -68,10 +66,10 @@
     min-height: 280px;
 
     &::after {
-      position: absolute;
-      z-index: -1;
       content: "";
+      position: absolute;
       top: 0;
+      z-index: -1;
 
       @include special-font-normal;
       @include text-size(280px, 280px);
@@ -184,22 +182,18 @@
   @include text-size(14px, 18px);
   color: $grey-dark;
 
-  br {
-    display: none;
-  }
-
   &::before {
+    content: "";
     position: absolute;
     left: 0;
-    content: "";
     width: 60px;
     height: 60px;
     background-color: $basic-green;
   }
 
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     left: 5px;
     width: 50px;
     height: 50px;
@@ -210,10 +204,6 @@
     padding: 151px 0 57px 0;
 
     @include text-size(16px, 24px);
-
-    br {
-      display: block;
-    }
 
     &::before {
       top: 40px;
@@ -234,7 +224,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-leaf@2x.png");
-      background-size: cover;
+      background-size: contain;
     }
   }
 }
@@ -245,7 +235,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-powder@2x.png");
-      background-size: cover;
+      background-size: contain;
     }
   }
 }
@@ -256,7 +246,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-dining@2x.png");
-      background-size: cover;
+      background-size: contain;
     }
   }
 }
@@ -267,7 +257,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/advantage-clock@2x.png");
-      background-size: cover;
+      background-size: contain;
     }
   }
 }

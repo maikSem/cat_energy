@@ -2,15 +2,15 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    min-height: 601px;  /*Временно*/
+    max-height: 601px;
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 400px; /*Временно*/
+    max-height: 400px;
   }
 }
 
-.map__wrapper {
+.map__header {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -18,25 +18,18 @@
   min-width: 320px;
 
   @media (min-width: $tablet-width) {
-    padding: 65px 30px 61px 30px;
+    padding: 65px 30px 59px 30px;
     width: 768px;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    top: 95px;
-    left: 110px;
+    top: 97px;
+    left: 113px;
+    z-index: 20;
     padding: 62px 89px 59px 76px;
     width: auto;
     background-color: $basic-white;
-  }
-}
-
-.map__wrapper-img {
-  height: 362px;
-
-  @media (min-width: $tablet-width) {
-    height: 400px;
   }
 }
 
@@ -44,10 +37,9 @@
   margin: 0;
 
   @include special-font-normal;
-  @include text-size(16px, 20px); /* По макету 18пх*/
-  text: {
-    transform: uppercase;
-  }
+  @include text-size(16px, 20px);
+  /* По макету 18пх*/
+  text-transform: uppercase;
   color: $special-black;
 
   @media (min-width: $tablet-width) {
@@ -92,6 +84,34 @@
   }
 }
 
+.map__wrapper {
+  position: relative;
+  height: 364px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.map__iframe {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.map__wrapper-img {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 364px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
 .map__img {
   width: 100%;
   max-height: 100%;
@@ -100,4 +120,13 @@
 
 .map--grey {
   background-color: $basic-grey;
+}
+
+.map__api {
+  z-index: 2;
+  height: 364px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }

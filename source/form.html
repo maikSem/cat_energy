@@ -5,28 +5,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
   <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
 <body class="body">
   <header class="header">
     <div class="header__wrapper header__wrapper--list">
-      <a class="header__logo header__logo--index" href="index.html">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="header__logo-img" src="img/logo-mobile.svg" width="190" height="37"
-            alt="Магазин функционального питания для котов «Кэт Энерджи»">
-        </picture>
-      </a>
-      <nav class="main-nav main-nav--opened">
+      <div class="header__box-logo">
+        <a class="header__logo header__logo--index" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="header__logo-img" src="img/logo-mobile.svg" width="190" height="37"
+              alt="Магазин функционального питания для котов «Кэт Энерджи»">
+          </picture>
+        </a>
+      </div>
+      <nav class="main-nav main-nav--closed main-nav--no-js">
         <button class="main-nav__toggle main-nav__toggle--closed" type="button">
-          </svg>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">Главная</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Подбор программы</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог
+              продукции</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="form.html">Подбор
+              программы</a></li>
         </ul>
       </nav>
     </div>
@@ -37,19 +42,19 @@
     <section class="form-order">
       <form class="form" action="https://echo.htmlacademy.ru" method="get">
         <div class="container">
-          <h2 class="form__title">Подбор программы</h2>
+          <h2 class="form__title form__title--top">Подбор программы</h2>
           <p class="form__text"> Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
         </div>
         <fieldset class="form__section form__section-header">
           <div class="form__section-wrapper">
             <ul class="form__list form__list--information">
               <li class="form__item form__item--text">
-                <label class="form__caption form__caption--text" for="name" required>Имя:*</label>
-                <input class="form__input form__name" type="text" name="name" id="name" placeholder="Барсик">
+                <label class="form__caption form__caption--text" for="name">Имя:*</label>
+                <input class="form__input form__name" type="text" name="name" id="name" placeholder="Барсик" required>
               </li>
               <li class="form__item form__item--text">
-                <label class="form__caption form__caption--text" for="mass" required>Вес (кг):*</label>
-                <input class="form__input form__mass" type="number" name="mass" id="mass" value="7">
+                <label class="form__caption form__caption--text" for="mass">Вес (кг):*</label>
+                <input class="form__input form__mass" type="number" name="mass" id="mass" value="7" required>
               </li>
               <li class="form__item form__item--text">
                 <label class="form__caption form__caption--age" for="age">Возраст (лет):</label>
@@ -78,7 +83,7 @@
         </fieldset>
         <fieldset class="form__section form__section-contact">
           <div class="container">
-            <legend class="form__legend form__legend--contact">Контактные данные <br> (владельца кота)</legend>
+            <h3 class="form__title form__title--contact">Контактные данные (владельца кота)</h3>
             <ul class="form__list form__list--email">
               <li class="form__item form__item--email">
                 <label class="form__caption form__caption--text" for="email">
@@ -103,16 +108,16 @@
         </fieldset>
         <fieldset class="form__section form__section-massage">
           <div class="container">
-            <legend class="form__legend form__legend--coment">Комментарий</legend>
+            <h3 class="form__title form__title--coment">Комментарий</h3>
             <div class="form__wrapper-textarea">
-              <textarea class="form__textarea" cols="30" rows="8" name="message"
+              <textarea class="form__textarea" cols="30" name="message"
                 placeholder="Расскажите обо всех повАдках кота"></textarea>
             </div>
           </div>
         </fieldset>
         <fieldset class="form__section form__section-additional">
           <div class="container">
-            <legend class="form__legend form__legend--additional">Дополнительно</legend>
+            <h3 class="form__title form__title--additional">Дополнительно</h3>
             <ul class="form__list form__list--checkbox">
               <li class="form__item form__item--checkbox">
                 <input class="form__checkbox visually-hidden" type="checkbox" name="sugar" id="sugar">
@@ -145,27 +150,31 @@
   </main>
   <section class="map map--grey">
     <h2 class="visually-hidden">Как нас найти?</h2>
-    <div class="map__wrapper">
+    <div class="map__header">
       <p class="map__text">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
       <p class="map__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="map__city">Санкт-Петербург</span></p>
     </div>
-    <div class="map__wrapper-img">
-      <picture>
-        <source type="image/webp" media="(min-width: 1440px)"
-          srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)"
-          srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
-        <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-        <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
-          alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-      </picture>
+    <div class="map__wrapper">
+      <div class="map__api"></div>
+      <div class="map__wrapper-img">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
+            alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </picture>
+      </div>
     </div>
   </section>
   <footer class="footer">
     <div class="footer__wrapper">
-      <a href="index.html" class="footer__link-logo" aria-label="Перейти на главную страницу">
+      <a href="index.html" class="footer__link-logo" aria-label="Перейти на главную страницу"
+        title="На главную страницу">
         <svg class="footer__logo" width="128" height="24">
           <title>Перейти на главную страницу</title>
           <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
@@ -174,7 +183,8 @@
       <div class="footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте"
+              title="Мы в Контакте">
               <svg class="social__svg social__svg--vk" width="23" height="16">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
@@ -182,7 +192,7 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"
-              aria-label="Инстаграм">
+              aria-label="Инстаграм" title="Мы в Инстаграме">
               <svg class="social__svg social__svg--insta" width="16" height="16">
                 <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
@@ -190,7 +200,7 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"
-              aria-label="Фэйсбук">
+              aria-label="Фэйсбук" title="Мы в Фэйсбуке">
               <svg class="social__svg social__svg--fb" width="22" height="22">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
@@ -199,8 +209,9 @@
         </ul>
       </div>
       <div class="footer__copyright copyright">
-        <a class="copyright__link-text" href="#">HTML Academy</a>
-        <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive"
+          title="Перейти на страницу интенсива">
           <svg class="copyright__svg" width="27" height="34" viewBox="0 0 27 34">
             <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
@@ -208,6 +219,9 @@
       </div>
     </div>
   </footer>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLsm-t08XSnrtJFO9KuDViWU1ZuuS601k&callback=initMap"></script>
+  <script src="js/scripts.min.js"></script>
 </body>
 
 </html>
