@@ -176,6 +176,14 @@
   }
 }
 
+.form__radio {
+  appearance: none;
+}
+
+.form__radio:focus + .form__caption--radio::before {
+  outline: 2px solid $special-green;
+}
+
 .form__radio:hover:not(:disabled) + .form__caption--radio::before {
   background-image: url("../img/radiobutton_hover.svg");
 }
@@ -212,6 +220,14 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.form__checkbox {
+  appearance: none;
+}
+
+.form__checkbox:focus + .form__caption--checkbox::before {
+  outline: 2px solid $special-green;
 }
 
 .form__checkbox:hover:not(:disabled) + .form__caption--checkbox::before {
